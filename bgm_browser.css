@@ -1,0 +1,21 @@
+/*https://bgm.tv/.*/browser*/
+/*https://bangumi.tv/.*/browser*/
+
+/*分类浏览：时间*/
+.l, li.airYear {
+    width: 108%;
+}
+
+.main, .columnSubjectBrowserA, .columnSubjectBrowserB, .footer {
+    width: 18%;
+}
+
+/*作品名*/
+.l, .tip.info {
+    font-size: 16px;
+}
+
+/*作品名原文*/
+.grey {
+    font-size: 15px !important;
+}
