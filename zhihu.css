@@ -1,0 +1,27 @@
+/*顶栏*/
+.AppHeader-inner {
+    width: 85%;
+}
+
+/*问题描述区域*/
+.QuestionHeader-content, .QuestionHeader-main, .QuestionHeader-footer-inner {
+    width: 85%;
+}
+
+/*回答区域字体*/
+.CopyrightRichText-richText.ztext.RichText {
+    font-size: 18px;
+}
+
+/*首页*/
+.TopstoryV2-container, .TopstoryV2-mainColumn {
+    width: 75%;
+}
+
+/*Profile*/
+.ProfileHeader {
+    width: 85%;
+}
+.UserCover {
+    height: 30%;
+}
