@@ -1,0 +1,51 @@
+/*title*/
+.ts {
+    font-size: 19px;
+}
+
+/*post time, commentar*/
+.authi, .plm.plc {
+    font-size: 15px;
+}
+
+/*post content*/
+.t_f {
+    font-size: 18px;
+}
+
+/*post modified time*/
+.pstatus {
+    font-size: 15px !important;
+}
+
+/*ID area*/
+.pls {
+    width: 12%;
+}
+
+/*id、头像和下方信息*/
+.favatar.pls, dl.cl {
+    width: 100%;
+}
+
+.avatar {
+    margin: 10px auto;
+}
+
+/*ID name*/
+.xw1, .pi {
+    font-size: 18px;
+    width: 500%;
+}
+
+
+/*ID info*/
+.xi2, .pls {
+    font-size: 16px !important;
+}
+dt {
+    width: 45% !important;
+}
+dd {
+    width: 50% !important;
+}
