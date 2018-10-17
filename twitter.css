@@ -1,0 +1,14 @@
+/*home*/
+.tweet-text.js-tweet-text.TweetTextSize, .u-textTruncate.show-popup-with-id.fullname {
+    font-size: 18px;
+    line-height: 1.7rem;
+}
+
+.u-textTruncate.u-dir.username, .js-relative-timestamp.js-short-timestamp._timestamp, .with-icn.tweet-context, .u-textUserColorHover.translate-button.js-translate-tweet.btn-link {
+    font-size: 15px;
+}
+
+/*notification*/
+.js-actionable-user.ActivityItem-displayText, .u-linkComplex-target.QuoteTweet-fullname, .ActivityItem-activityTimestamp, .u-linkComplex-target.QuoteTweet-fullname, .u-textTruncate.u-dir.username, .js-nav.QuoteTweet-link, .QuoteTweet-container {
+    font-size: 17px;
+}
