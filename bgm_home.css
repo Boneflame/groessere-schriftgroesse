@@ -1,0 +1,23 @@
+/*http://bgm.tv*/
+/*http://bangumi.tv*/
+
+
+/*追的作品的名字*/
+.tinyHeader {
+    font-size: 16px;
+}
+
+/*作品简介*/
+.subject_summary {
+    font-size: 17px !important;
+}
+
+/*吐槽箱*/
+.text {
+    font-size: 16px !important
+}
+
+/*作品搜索结果中的评分、评分人数*/
+.fade, .tip_j {
+    font-size: 16px !important
+}
