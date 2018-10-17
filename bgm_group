@@ -1,0 +1,23 @@
+/*https://bgm.tv/group*/
+/*https://bangumi.tv/group*/
+
+
+/*贴子标题*/
+.avatar.l, .sub_title, .l {
+    font-size: 16px;
+}
+
+/*楼层的回复、ID、春菜*/
+.cmt_sub_content, .inner {
+    font-size: 17px;
+}
+
+/*reply*/
+.topic_content, .reply_content, .message {
+    font-size: 17px !important;
+}
+
+/*个性签名*/
+.tip_j {
+    font-size: 15px !important;
+}
