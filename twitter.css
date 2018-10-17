@@ -11,4 +11,5 @@
 /*notification*/
 .js-actionable-user.ActivityItem-displayText, .u-linkComplex-target.QuoteTweet-fullname, .ActivityItem-activityTimestamp, .u-linkComplex-target.QuoteTweet-fullname, .u-textTruncate.u-dir.username, .js-nav.QuoteTweet-link, .QuoteTweet-container {
     font-size: 17px;
+    line-height: 1.7rem;
 }
