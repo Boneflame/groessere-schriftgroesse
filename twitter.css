@@ -1,11 +1,24 @@
 /*home*/
-.tweet-text.js-tweet-text.TweetTextSize, .u-textTruncate.show-popup-with-id.fullname {
+.tweet-text.js-tweet-text.TweetTextSize {
     font-size: 18px;
     line-height: 1.7rem;
 }
 
+/*username*/
+.u-textTruncate.show-popup-with-id.fullname {
+    font-size: 18px;
+    line-height: 2rem;
+}
+
 .u-textTruncate.u-dir.username, .js-relative-timestamp.js-short-timestamp._timestamp, .with-icn.tweet-context, .u-textUserColorHover.translate-button.js-translate-tweet.btn-link {
     font-size: 15px;
+    line-height: 1.7rem;
+}
+
+/*post time*/
+.js-relative-timestamp.js-short-timestamp._timestamp {
+    font-size: 15px;
+    line-height: 1.8rem;
 }
 
 /*notification*/
