@@ -4,6 +4,11 @@
     line-height: 1.7rem;
 }
 
+/*user's homepage*/
+.js-short-timestamp._timestamp {
+    line-height: 1.975rem;
+}
+
 /*username*/
 .u-textTruncate.show-popup-with-id.fullname {
     font-size: 18px;
