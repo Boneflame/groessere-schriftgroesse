@@ -3,37 +3,39 @@
     font-size: 19px;
 }
 
+
 /*post time, commentar*/
 .authi, .plm.plc {
     font-size: 15px;
 }
+
 
 /*post content*/
 .t_f {
     font-size: 18px;
 }
 
+
 /*post modified time*/
 .pstatus {
     font-size: 15px !important;
 }
 
+
 /*ID area*/
 .pls {
     width: 12%;
 }
-
-/*id、头像和下方信息*/
 dl.cl {
     width: 100%;
 }
 .favatar.pls {
     width: 185px;
 }
-
 .avatar {
     margin: 10px auto;
 }
+
 
 /*ID name*/
 .xw1, .pi {
@@ -51,4 +53,10 @@ dt {
 }
 dd {
     width: 50% !important;
+}
+
+
+/*回复、评分、举报*/
+.cl.pob {
+    font-size: 15px;
 }
