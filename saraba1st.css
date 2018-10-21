@@ -24,8 +24,11 @@
 }
 
 /*id、头像和下方信息*/
-.favatar.pls, dl.cl {
+dl.cl {
     width: 100%;
+}
+.favatar.pls {
+    width: 185px;
 }
 
 .avatar {
