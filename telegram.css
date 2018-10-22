@@ -3,17 +3,24 @@
     height: 4.8rem !important;
 }
 
+
 /*文件标题*/
 .audio_player_title_wrap {
     height: 1.4rem !important;
 }
+
 
 /*未读计数*/
 .im_dialog_badge_muted.badge.im_dialog_badge {
     line-height: 0.6rem !important;
     font-size: 14px !important;
 }
-
 .im_dialog_date {
     height: 1.75rem !important;
+}
+
+
+/*group info popup*/
+.md_modal_iconed_section_peers.md_modal_iconed_section_wrap, .md_modal_body, .md_modal_wrap.chat_modal_wrap, .md_modal_head {
+    width: 120% !important;
 }
