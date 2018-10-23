@@ -31,3 +31,10 @@
     font-size: 17px;
     line-height: 1.7rem;
 }
+
+
+/*3 dot button beside follow button*/
+.plain-btn.btn.js-tooltip.js-link.js-dropdown-toggle.dropdown-toggle.user-dropdown {
+    background-color: #233446;
+    border-width: 0px;
+}
