@@ -38,3 +38,9 @@
     background-color: #233446;
     border-width: 0px;
 }
+
+
+/*Tweet in gallery*/
+.enable-fade.GalleryTweet {
+    opacity: 0;
+}
