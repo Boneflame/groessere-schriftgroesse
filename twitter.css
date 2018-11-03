@@ -1,27 +1,77 @@
-/*wider timeline*/
-.content-main {
-    width: 1000px!important;
+/*main page*/
+.content-main{
+    width: 100% !important;
 }
 .wrapper {
-    width: 1000px!important;
+    width: 57% !important;
 }
 
 /*left dashboard*/
 .dashboard-left.dashboard {
     position: fixed !important;
-    margin: auto!important;
-    left: 80px!important;
+    margin: auto !important;
+    left: 4% !important;
 }
 
 /*right dashboard*/
 .dashboard-right.dashboard {
     position: fixed !important;
-    margin: auto!important;
-    width: 330px;
-    right: 20px!important;
-    top: 55px!important;
+    margin: auto !important;
+    width: 18%;
+    right: 2% !important;
+    top: 6% !important;
 }
 
+/*Profile*/
+/*timeline*/
+.u-lg-size2of3.Grid-cell {
+    width: 83% !important;
+    position: absolute !important;
+    margin: auto !important;
+    left: 10% !important;
+}
+
+/*avatar*/
+.ProfileCanopy-avatar {
+    position: absolute !important;
+    margin: auto !important;
+    left : -15% !important;
+}
+
+/*left dashboard*/
+.u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
+    position: absolute !important;
+    margin: auto !important;
+    left: -23% !important;
+    width: 33%
+}
+
+/*
+.u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
+    position: fixed !important;
+    margin: auto!important;
+    left: 1%!important;
+    width: 22.5%;
+    top: 30%
+}
+*/
+
+/*right dashboard*/
+.SidebarCommonModules {
+    position: absolute !important;
+    margin: auto !important;
+    right: -22% !important;
+    width: 28%
+}
+/*
+.SidebarCommonModules {
+    position: fixed !important;
+    margin: auto !important;
+    right: 0.5% !important;
+    width: 19.5%;
+    top: 15%
+}
+*/
 
 /*font config*/
 /*home*/
@@ -67,6 +117,6 @@
 
 
 /*Tweet in gallery*/
-.enable-fade.GalleryTweet {
+/*.enable-fade.GalleryTweet {
     opacity: 0;
-}
+}*/
