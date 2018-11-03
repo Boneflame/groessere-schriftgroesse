@@ -1,6 +1,8 @@
 /*main page*/
 .content-main{
-    width: 100% !important;
+    width: 101% !important;
+    position: absolute;
+    left: -2%
 }
 .wrapper {
     width: 57% !important;
@@ -10,7 +12,8 @@
 .dashboard-left.dashboard {
     position: fixed !important;
     margin: auto !important;
-    left: 4% !important;
+    left: 2% !important;
+    width: 17%;
 }
 
 /*right dashboard*/
@@ -73,10 +76,12 @@
 }
 */
 
+
 /*font config*/
+
 /*home*/
 .tweet-text.js-tweet-text.TweetTextSize {
-    font-size: 18px;
+    font-size: 1.2rem !important;
     line-height: 1.7rem;
 }
 
@@ -87,25 +92,26 @@
 
 /*username*/
 .u-textTruncate.show-popup-with-id.fullname {
-    font-size: 18px;
+    font-size: 1.3rem !important;
     line-height: 2rem;
 }
 
 .u-textTruncate.u-dir.username, .js-relative-timestamp.js-short-timestamp._timestamp, .with-icn.tweet-context, .u-textUserColorHover.translate-button.js-translate-tweet.btn-link {
-    font-size: 15px;
+    font-size: 1.2rem !important;
     line-height: 1.7rem;
 }
 
 /*post time*/
 .js-relative-timestamp.js-short-timestamp._timestamp {
-    font-size: 15px;
+    font-size: 1.2rem;
     line-height: 1.8rem;
 }
 
 /*notification*/
 .js-actionable-user.ActivityItem-displayText, .u-linkComplex-target.QuoteTweet-fullname, .ActivityItem-activityTimestamp, .u-linkComplex-target.QuoteTweet-fullname, .u-textTruncate.u-dir.username, .js-nav.QuoteTweet-link, .QuoteTweet-container {
-    font-size: 17px;
+    font-size: 1rem;
     line-height: 1.7rem;
+    vertical-align: bottom !important;
 }
 
 
@@ -115,8 +121,3 @@
     border-width: 0px;
 }
 
-
-/*Tweet in gallery*/
-/*.enable-fade.GalleryTweet {
-    opacity: 0;
-}*/
