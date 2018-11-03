@@ -1,3 +1,29 @@
+/*wider timeline*/
+.content-main {
+    width: 1000px!important;
+}
+.wrapper {
+    width: 1000px!important;
+}
+
+/*left dashboard*/
+.dashboard-left.dashboard {
+    position: fixed !important;
+    margin: auto!important;
+    left: 80px!important;
+}
+
+/*right dashboard*/
+.dashboard-right.dashboard {
+    position: fixed !important;
+    margin: auto!important;
+    width: 330px;
+    right: 20px!important;
+    top: 55px!important;
+}
+
+
+/*font config*/
 /*home*/
 .tweet-text.js-tweet-text.TweetTextSize {
     font-size: 18px;
