@@ -1,0 +1,96 @@
+@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv/.*/browser.*") {
+/*分类浏览：时间*/
+.l, li.airYear {
+    width: 108%;
+}
+
+.main, .columnSubjectBrowserA, .columnSubjectBrowserB, .footer {
+    width: 18%;
+}
+
+/*作品名*/
+.l, .tip.info {
+    font-size: 16px;
+}
+
+/*作品名原文*/
+.grey {
+    font-size: 15px !important;
+}
+}
+
+@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv/group.*") {
+/*https://bgm.tv/group*/
+/*https://bangumi.tv/group*/
+
+
+/*贴子标题*/
+.avatar.l, .sub_title, .l {
+    font-size: 1.1rem;
+}
+
+/*楼层的回复、ID、春菜*/
+.cmt_sub_content, .inner {
+    font-size: 1.15rem;
+}
+
+/*reply*/
+.topic_content, .reply_content, .message {
+    font-size: 1.15rem !important;
+}
+
+/*个性签名*/
+.tip_j {
+    font-size: 1rem !important;
+}
+
+/*帖子主区域定位*/
+.clearit.columns {
+    position: relative !important;
+    left: -30% !important;
+}
+
+/*文字区域拓宽*/
+#columnInSubjectA {
+    width: 150% !important
+}
+
+/*楼层中的回复*/
+.cmt_sub_content {
+    width: 150% !important
+}
+
+#columnInSubjectB {
+    position: absolute !important;
+    right: -50% !important
+}
+
+
+
+}
+
+@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv") {
+/*http://bgm.tv*/
+/*http://bangumi.tv*/
+
+
+/*追的作品的名字*/
+.tinyHeader {
+    font-size: 16px;
+}
+
+/*作品简介*/
+.subject_summary {
+    font-size: 17px !important;
+}
+
+/*吐槽箱*/
+.text {
+    font-size: 16px !important
+}
+
+/*作品搜索结果中的评分、评分人数*/
+.fade, .tip_j {
+    font-size: 16px !important
+}
+}
