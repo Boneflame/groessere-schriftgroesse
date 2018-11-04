@@ -12,9 +12,17 @@ li.airYear:nth-of-type(n) > .l, #futureAirTime > .l, #pastAirTime > .l  {
     width: 110%;
     font-size: 15px !important;
 }
+div.clearit.item:nth-of-type(n), .entry {
+    line-height: 1.2rem;
+    height: 8rem
+}
+.time {
+    height: 2.2rem !important;
+    line-height: 1.1rem !important
+}
 
 /*主显示区域、热门小组*/
-.topic_list, .home_title, .title, .groupsLarge, .section {
+.home_title, .groupsLarge, .section {
     position: relative;
     left: -40%;
     width: 180% !important;
@@ -101,4 +109,12 @@ li.airYear:nth-of-type(n) > .l, #futureAirTime > .l, #pastAirTime > .l  {
     width: 28% !important;
 }
 
+}
+
+@-moz-document regexp("http(s|)://bgm\.tv/group/discover") {
+.topic_list, .title {
+    position: relative;
+    left: -40%;
+    width: 180% !important;
+}
 }
