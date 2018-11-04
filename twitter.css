@@ -1,4 +1,4 @@
-@-moz-document regexp("https://twitter\\.com") {
+@-moz-document regexp("https://twitter\.com") {
 /*main page*/
 .content-main{
     width: 101% !important;
@@ -125,7 +125,7 @@
 
 }
 
-@-moz-document regexp("https://twitter\\.com/search.*") {
+@-moz-document regexp("https://twitter\.com/search.*") {
 /*timeline*/
 .content-main{
     width: 75% !important;
