@@ -1,3 +1,84 @@
+@-moz-document domain("www.zhihu.com") {
+.Topstory-container {
+	width: 85%;
+}
+
+.Topstory-mainColumn{
+	width: 85%;
+}
+.TopstorySideBar{
+	width: 25%;
+}
+.TopstoryMain{
+	width: 100%;
+}
+.Question-main{
+	width: 85%;
+}
+.Question-mainColumn{
+	width: 85%;
+}
+}
+
+@-moz-document domain("zhuanlan.zhihu.com") {
+/*知乎专栏*/
+.Column-ArticleList {
+    position: absolute !important;
+    width: 80% !important;
+    left: 10%
+}
+
+/*文字列表摘要和文章正文*/
+.RichContent-inner, p:nth-of-type(n) {
+    font-size: 1.15rem
+}
+
+/*正文区域加宽*/
+.Post-Header, .Post-NormalMain > div, .TitleImage {
+    width: 80% !important;
+}
+
+/*分享按钮*/
+.Post-SideActions {
+    left: 5%
+}
+
+/*右上按钮*/
+.Button--blue.ColumnPageHeader-WriteButton.Button {
+    width: 150px !important
+}
+
+/*文章标题*/
+.ArticleItem-Title, .Post-Title {
+    font-size: 1.5rem !important
+}
+
+}
+
+@-moz-document regexp(".*\\.zhihu.com/search\\?.*") {
+.Search-container{
+	width: 85%;
+}
+/*搜索主体*/
+.SearchMain{
+	width: 85%;
+}
+/*顶部的相关用户和话题*/
+.SearchSections{
+	width: 100%;
+}
+}
+
+@-moz-document regexp(".*\\.zhihu.com/people/.*") {
+.Profile-main{
+	width: 85%;
+}
+.Profile-mainColumn{
+	width: 100%;
+}
+}
+
+@-moz-document regexp("http(s|)://www\\.zhihu\\.com.*") {
 /*顶栏*/
 .AppHeader-inner {
     width: 85%;
@@ -10,7 +91,12 @@
 
 /*回答区域字体*/
 .CopyrightRichText-richText.ztext.RichText {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+/*评论区字体*/
+.CommentRichText, .CommentItemV2-meta {
+    font-size: 1rem
 }
 
 /*首页*/
@@ -24,4 +110,7 @@
 }
 .UserCover {
     height: 30%;
+}
+
+
 }
