@@ -1,42 +1,54 @@
-@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv/.*/browser.*") {
-/*分类浏览：时间*/
-.l, li.airYear {
-    width: 108%;
+@-moz-document domain("bgm.tv"), domain("bangumi.tv") {
+/*顶栏导航、底部“关于”*/
+#navMenuNeue.clearit, #footerLinks.clearit {
+    width: 110%
 }
 
-.main, .columnSubjectBrowserA, .columnSubjectBrowserB, .footer {
-    width: 18%;
+/*font size*/
+.l, .message, .inner {
+    font-size: 1.05rem;
 }
-
-/*作品名*/
-.l, .tip.info {
-    font-size: 16px;
-}
-
-/*作品名原文*/
-.grey {
+li.airYear:nth-of-type(n) > .l, #futureAirTime > .l, #pastAirTime > .l  {
+    width: 110%;
     font-size: 15px !important;
 }
+
+/*主显示区域、热门小组*/
+.topic_list, .home_title, .title, .groupsLarge, .section {
+    position: relative;
+    left: -40%;
+    width: 180% !important;
+}
+.groupsLarge > li:nth-of-type(n) {
+    position: relative;
+    width: 14%;
 }
 
-@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv/group.*") {
-/*https://bgm.tv/group*/
-/*https://bangumi.tv/group*/
+/*右侧列表*/
+#columnB, #columnSubjectBrowserB.column {
+    position: absolute;
+    right: 5%;
+    width: 20%
+}
+.groupsSmall > li:nth-of-type(n) {
+    width: 100%
+}
+}
 
-
-/*贴子标题*/
+@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv/group/topic/.*") {
+/*楼主ID*/
 .avatar.l, .sub_title, .l {
     font-size: 1.1rem;
 }
 
-/*楼层的回复、ID、春菜*/
-.cmt_sub_content, .inner {
-    font-size: 1.15rem;
+/*主题内容*/
+.topic_content, .reply_content, .message {
+    font-size: 1.05rem !important;
 }
 
-/*reply*/
-.topic_content, .reply_content, .message {
-    font-size: 1.15rem !important;
+/*楼层的回复、ID、春菜*/
+.cmt_sub_content, .inner, .quote {
+    font-size: 1.05rem;
 }
 
 /*个性签名*/
@@ -44,53 +56,49 @@
     font-size: 1rem !important;
 }
 
-/*帖子主区域定位*/
+/*帖子主区域定位，楼层回复文字区域的宽度*/
 .clearit.columns {
     position: relative !important;
-    left: -30% !important;
+    left: -25% !important;
+    width: 100%;
 }
 
-/*文字区域拓宽*/
+/*整个文字区域加宽*/
 #columnInSubjectA {
     width: 150% !important
 }
 
-/*楼层中的回复*/
-.cmt_sub_content {
-    width: 150% !important
+/*楼层中的回复和引用*/
+.cmt_sub_content, .quote {
+    width: 195% !important
 }
 
-#columnInSubjectB {
+/*右上“返回”、“发新帖”*/
+.menu_inner {
+    position: absolute;
+    right: -50%;
+    top: 10px;
+    width: 25%;
+}
+}
+
+@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv/") {
+/*主页*/
+#columnHomeA {
+    position: relative !important;
+    width: 135% !important;
+    left: -30% !important;
+}
+
+#columnHomeB {
     position: absolute !important;
-    right: -50% !important
+    right: 5% !important;
 }
 
-
-
+/*watching list*/
+.tinyMode.even.infoWrapper.clearit, .tinyMode.info_show.odd.infoWrapper.clearit, .tinyMode.odd.infoWrapper.clearit {
+    position: relative !important;
+    width: 28% !important;
 }
 
-@-moz-document regexp("http(s|)://(bgm|bangumi)\.tv") {
-/*http://bgm.tv*/
-/*http://bangumi.tv*/
-
-
-/*追的作品的名字*/
-.tinyHeader {
-    font-size: 16px;
-}
-
-/*作品简介*/
-.subject_summary {
-    font-size: 17px !important;
-}
-
-/*吐槽箱*/
-.text {
-    font-size: 16px !important
-}
-
-/*作品搜索结果中的评分、评分人数*/
-.fade, .tip_j {
-    font-size: 16px !important
-}
 }
