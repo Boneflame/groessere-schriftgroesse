@@ -1,3 +1,4 @@
+@-moz-document regexp("https://twitter\\.com") {
 /*main page*/
 .content-main{
     width: 101% !important;
@@ -76,9 +77,9 @@
 }
 */
 
+}
 
-/*font config*/
-
+@-moz-document domain("twitter.com") {
 /*home*/
 .tweet-text.js-tweet-text.TweetTextSize {
     font-size: 1.2rem !important;
@@ -121,3 +122,22 @@
     border-width: 0px;
 }
 
+
+}
+
+@-moz-document regexp("https://twitter\\.com/search.*") {
+/*timeline*/
+.content-main{
+    width: 75% !important;
+    position: absolute;
+    left: 22.1%
+}
+
+/*left dashboard*/
+.u-lg-size1of4.u-size1of3.Grid-cell {
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    width: 20% !important;
+}
+}
