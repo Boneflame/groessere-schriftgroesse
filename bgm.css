@@ -78,7 +78,8 @@ div.clearit.item:nth-of-type(n), .entry {
 
 /*楼层中的回复和引用*/
 .cmt_sub_content, .quote {
-    width: 195% !important
+    width: 95% !important;
+    max-width: 95% !important;
 }
 
 /*右上“返回”、“发新帖”*/
