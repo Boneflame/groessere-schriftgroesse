@@ -24,3 +24,13 @@
 .md_modal_iconed_section_peers.md_modal_iconed_section_wrap, .md_modal_body, .md_modal_wrap.chat_modal_wrap, .md_modal_head {
     width: 120% !important;
 }
+
+
+/*sticker position fix for Telegram ESI*/
+.composer_emoji_tooltip.noselect.composer_emoji_tooltip_tabs_stickers_active, .composer_emoji_tooltip.noselect.composer_emoji_tooltip_shown {
+    position: absolute !important;
+    left: 85% !important;
+    top: 80% !important;
+    width: 15% !important;
+    height: 35% !important
+}
