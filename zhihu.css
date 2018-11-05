@@ -1,22 +1,50 @@
 @-moz-document domain("www.zhihu.com") {
-.Topstory-container {
-	width: 85%;
+/*顶栏*/
+.AppHeader-inner {
+    width: 85%;
 }
 
-.Topstory-mainColumn{
-	width: 85%;
+
+/*问题描述区域*/
+.QuestionHeader-content, .QuestionHeader-main, .QuestionHeader-footer-inner {
+    width: 87%;
 }
-.TopstorySideBar{
-	width: 25%;
+
+
+/*回答区域*/
+.Question-mainColumn {
+    position: absolute;
+    left: 7.5%;
+	width: 69.5%;
 }
-.TopstoryMain{
-	width: 100%;
+.CopyrightRichText-richText.ztext.RichText {
+    font-size: 1.1rem;
 }
-.Question-main{
-	width: 85%;
+/*评论区字体*/
+.CommentRichText, .CommentItemV2-meta {
+    font-size: 1rem
 }
-.Question-mainColumn{
-	width: 85%;
+
+
+/*右边栏*/
+.Question-sideColumn--sticky.Question-sideColumn {
+    position: relative;
+    right: -102.5%;
+}
+
+
+/*首页*/
+.TopstoryV2-container, .TopstoryV2-mainColumn {
+    width: 75%;
+}
+
+
+/*Profile*/
+.ProfileHeader {
+    width: 85%;
+}
+.UserCover {
+    height: 30%;
 }
 }
 
@@ -78,39 +106,18 @@
 }
 }
 
-@-moz-document regexp("http(s|)://www\\.zhihu\\.com.*") {
-/*顶栏*/
-.AppHeader-inner {
-    width: 85%;
+@-moz-document regexp("https://www\\.zhihu\\.com/topic.*") {
+.ContentLayout-sideColumn {
+    position: absolute;
+    top: 7%;
+    right: 2%;
+    width: 20%
 }
 
-/*问题描述区域*/
-.QuestionHeader-content, .QuestionHeader-main, .QuestionHeader-footer-inner {
-    width: 85%;
+.ContentLayout-mainColumn {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    width: 70%
 }
-
-/*回答区域字体*/
-.CopyrightRichText-richText.ztext.RichText {
-    font-size: 1.1rem;
-}
-
-/*评论区字体*/
-.CommentRichText, .CommentItemV2-meta {
-    font-size: 1rem
-}
-
-/*首页*/
-.TopstoryV2-container, .TopstoryV2-mainColumn {
-    width: 75%;
-}
-
-/*Profile*/
-.ProfileHeader {
-    width: 85%;
-}
-.UserCover {
-    height: 30%;
-}
-
-
 }
