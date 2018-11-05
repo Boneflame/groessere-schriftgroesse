@@ -11,8 +11,8 @@
 }
 
 
-/*回答区域*/
-.Question-mainColumn {
+/*主栏（回答区域）*/
+.Question-mainColumn, .Topstory-mainColumn {
     position: absolute;
     left: 7.5%;
 	width: 69.5%;
@@ -27,15 +27,14 @@
 
 
 /*右边栏*/
-.Question-sideColumn--sticky.Question-sideColumn {
+.Question-sideColumn--sticky.Question-sideColumn  {
     position: relative;
     right: -102.5%;
 }
-
-
-/*首页*/
-.TopstoryV2-container, .TopstoryV2-mainColumn {
-    width: 75%;
+/*首页右边栏*/
+.GlobalSideBar {
+    position: fixed;
+    right: 7.5%;
 }
 
 
@@ -45,6 +44,11 @@
 }
 .UserCover {
     height: 30%;
+}
+/*右边栏*/
+.Profile-sideColumn {
+    position: relative;
+    right: -0.5%;
 }
 }
 
