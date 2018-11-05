@@ -1,60 +1,52 @@
-@-moz-document regexp("https://twitter\.com") {
+@-moz-document regexp("https://twitter\\.com[^\\?=]*") {
 /*main page*/
-.content-main{
-    width: 101% !important;
-    position: absolute;
-    left: -2%
-}
-.wrapper {
-    width: 57% !important;
+/*timeline*/
+.content-main {
+    position: relative;
+    left: -0.2%;
+    width: 97%;
 }
 
 /*left dashboard*/
 .dashboard-left.dashboard {
-    position: fixed !important;
-    margin: auto !important;
-    left: 2% !important;
+    position: fixed;
+    left: 2%;
     width: 17%;
 }
 
 /*right dashboard*/
 .dashboard-right.dashboard {
-    position: fixed !important;
-    margin: auto !important;
+    position: fixed;
     width: 18%;
-    right: 2% !important;
-    top: 6% !important;
+    right: 2%;
+    top: 5.7%;
 }
 
 /*Profile*/
 /*timeline*/
 .u-lg-size2of3.Grid-cell {
-    width: 83% !important;
-    position: absolute !important;
-    margin: auto !important;
-    left: 10% !important;
+    position: absolute;
+    width: 85% !important;
+    left: 8.7%;
 }
 
 /*avatar*/
 .ProfileCanopy-avatar {
-    position: absolute !important;
-    margin: auto !important;
-    left : -15% !important;
+    position: absolute;
+    left : -15%;
 }
 
 /*left dashboard*/
 .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
-    position: absolute !important;
-    margin: auto !important;
-    left: -23% !important;
+    position: absolute;
+    left: -23%;
     width: 33%
 }
 
 /*
 .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
-    position: fixed !important;
-    margin: auto!important;
-    left: 1%!important;
+    position: fixed;
+    left: 1%;
     width: 22.5%;
     top: 30%
 }
@@ -62,16 +54,14 @@
 
 /*right dashboard*/
 .SidebarCommonModules {
-    position: absolute !important;
-    margin: auto !important;
-    right: -22% !important;
+    position: absolute;
+    right: -22%;
     width: 28%
 }
 /*
 .SidebarCommonModules {
-    position: fixed !important;
-    margin: auto !important;
-    right: 0.5% !important;
+    position: fixed;
+    right: 0.5% ;
     width: 19.5%;
     top: 15%
 }
@@ -82,50 +72,40 @@
 @-moz-document domain("twitter.com") {
 /*home*/
 .tweet-text.js-tweet-text.TweetTextSize {
-    font-size: 1.2rem !important;
-    line-height: 1.7rem;
+    font-size: 1.1rem !important;
+    line-height: 1.4rem
 }
 
 /*user's homepage*/
 .js-short-timestamp._timestamp {
-    line-height: 1.975rem;
+    line-height: 1.8rem;
 }
 
 /*username*/
 .u-textTruncate.show-popup-with-id.fullname {
-    font-size: 1.3rem !important;
-    line-height: 2rem;
+    font-size: 1.2rem !important;
+    line-height: 1.75rem;
 }
 
 .u-textTruncate.u-dir.username, .js-relative-timestamp.js-short-timestamp._timestamp, .with-icn.tweet-context, .u-textUserColorHover.translate-button.js-translate-tweet.btn-link {
-    font-size: 1.2rem !important;
-    line-height: 1.7rem;
+    font-size: 1rem !important;
 }
 
 /*post time*/
 .js-relative-timestamp.js-short-timestamp._timestamp {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
 }
 
 /*notification*/
 .js-actionable-user.ActivityItem-displayText, .u-linkComplex-target.QuoteTweet-fullname, .ActivityItem-activityTimestamp, .u-linkComplex-target.QuoteTweet-fullname, .u-textTruncate.u-dir.username, .js-nav.QuoteTweet-link, .QuoteTweet-container {
     font-size: 1rem;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
     vertical-align: bottom !important;
 }
 
-
-/*3 dot button beside follow button*/
-.plain-btn.btn.js-tooltip.js-link.js-dropdown-toggle.dropdown-toggle.user-dropdown {
-    background-color: #233446;
-    border-width: 0px;
 }
 
-
-}
-
-@-moz-document regexp("https://twitter\.com/search.*") {
+@-moz-document regexp("https://twitter\\.com/search.*") {
 /*timeline*/
 .content-main{
     width: 75% !important;
@@ -136,8 +116,33 @@
 /*left dashboard*/
 .u-lg-size1of4.u-size1of3.Grid-cell {
     position: fixed;
-    top: 10%;
+    top: 18%;
     left: 2%;
     width: 20% !important;
+}
+}
+
+@-moz-document regexp("https://twitter\\.com/hashtag.*") {
+/*timeline*/
+.u-lg-size2of3.u-size2of2.Grid-cell {
+    position: absolute;
+    left: 24.8%;
+}
+#timeline.AdaptiveSearchTimeline.content-main {
+    width: 80%
+}
+
+/*left dashboard*/
+.u-lg-size1of4.u-size1of3.Grid-cell{
+    position: fixed;
+    top: 18%;
+    left: 2%;
+    width: 23% !important
+}
+.SidebarCommonModules {
+    position: fixed;
+    top: 23.3%;
+    left: 2.22%;
+    width: 22.5% !important
 }
 }
