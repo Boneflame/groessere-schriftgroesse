@@ -4,39 +4,10 @@
     width: 85%;
 }
 
-
 /*问题描述区域*/
 .QuestionHeader-content, .QuestionHeader-main, .QuestionHeader-footer-inner {
     width: 87%;
 }
-
-
-/*主栏（回答区域）*/
-.Question-mainColumn, .Topstory-mainColumn {
-    position: absolute;
-    left: 7.5%;
-	width: 69.5%;
-}
-.CopyrightRichText-richText.ztext.RichText {
-    font-size: 1.1rem;
-}
-/*评论区字体*/
-.CommentRichText, .CommentItemV2-meta {
-    font-size: 1rem
-}
-
-
-/*右边栏*/
-.Question-sideColumn--sticky.Question-sideColumn  {
-    position: relative;
-    right: -102.5%;
-}
-/*首页右边栏*/
-.GlobalSideBar {
-    position: fixed;
-    right: 7.5%;
-}
-
 
 /*Profile*/
 .ProfileHeader {
@@ -45,10 +16,67 @@
 .UserCover {
     height: 30%;
 }
-/*右边栏*/
+
+/*主栏字体*/
+.CopyrightRichText-richText.ztext.RichText {
+    font-size: 1.1rem;
+}
+/*评论区字体*/
+.CommentRichText, .CommentItemV2-meta {
+    font-size: 1rem
+}
+
+/*Profile右边栏
 .Profile-sideColumn {
     position: relative;
     right: -0.5%;
+}
+*/
+
+/*above 1366*/
+@media screen and (min-width: 1367px) {
+    /*右边栏*/
+    .Question-sideColumn--sticky.Question-sideColumn  {
+        position: absolute;
+        right: 3%;
+        width: 19%
+    }
+    /*主栏（回答区域）*/
+    .Question-mainColumn, .Topstory-mainColumn {
+        position: absolute;
+        left: 3%;
+    	width: 74%
+    }
+    /*首页右边栏*/
+    .GlobalSideBar {
+        position: fixed;
+        right: 1%;
+        width: 20%
+    }
+
+}
+
+/*below 1366*/
+@media screen and (max-width: 1366px) and (min-width: 1200px) {
+    /*主栏（回答区域）*/
+    .Question-mainColumn, .Topstory-mainColumn {
+        position: absolute;
+        left: 0%;
+    	width: 76%;
+    }
+
+    /*右边栏*/
+    .Question-sideColumn--sticky.Question-sideColumn  {
+        position: absolute;
+        right: 0%;
+    }
+
+    /*首页右边栏*/
+    .GlobalSideBar {
+        position: fixed;
+        right: 0%;
+        width: 23%
+    }
 }
 }
 
@@ -72,7 +100,7 @@
 
 /*分享按钮*/
 .Post-SideActions {
-    left: 5%
+    left: 4%
 }
 
 /*右上按钮*/
