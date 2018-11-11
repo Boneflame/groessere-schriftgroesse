@@ -1,3 +1,4 @@
+@-moz-document regexp("https://twitter\\.com.*?\\?(?=lang).*"), regexp("https://twitter\\.com[^\\?]*") {
 @media screen and (min-width: 1366px) {
     /*main page*/
     /*timeline*/
@@ -36,8 +37,8 @@
     .ProfileCanopy-inner {
         width: 102% !important;
     }
-    /*timeline*/
-    .u-lg-size2of3, .u-lg-size4of6, .u-lg-size8of12 {
+    /*timeline and provide user*/
+    .u-lg-size2of3, .u-lg-size4of6, .u-lg-size8of12, .ProfileClusterFollow {
         position: relative;
         left: 17%;
         width: 100% !important
@@ -65,4 +66,72 @@
         width: 32%
         
     }
+}
+}
+
+@-moz-document domain("twitter.com") {
+/*home*/
+.tweet-text.js-tweet-text.TweetTextSize {
+    font-size: 1.1rem !important;
+    line-height: 1.4rem
+}
+
+/*user's homepage*/
+.js-short-timestamp._timestamp {
+    line-height: 1.8rem;
+}
+
+/*username*/
+.u-textTruncate.show-popup-with-id.fullname {
+    font-size: 1.2rem !important;
+    line-height: 1.75rem;
+}
+
+.u-textTruncate.u-dir.username, .js-relative-timestamp.js-short-timestamp._timestamp, .with-icn.tweet-context, .u-textUserColorHover.translate-button.js-translate-tweet.btn-link {
+    --font-size: 1rem !important;
+}
+
+/*post time*/
+.js-relative-timestamp.js-short-timestamp._timestamp {
+    font-size: var(--font-size);
+}
+
+/*notification*/
+.js-actionable-user.ActivityItem-displayText, .u-linkComplex-target.QuoteTweet-fullname, .ActivityItem-activityTimestamp, .u-linkComplex-target.QuoteTweet-fullname, .u-textTruncate.u-dir.username, .js-nav.QuoteTweet-link, .QuoteTweet-container {
+    font-size: var(--font-size);
+    line-height: 1.8rem;
+    vertical-align: bottom !important;
+}
+
+}
+
+@-moz-document regexp("https://twitter\\.com/hashtag.*"), regexp("https://twitter\\.com/search.*") {
+/*timeline*/
+.u-lg-size2of3.u-size2of2.Grid-cell {
+    position: absolute;
+    left: 24.8%;
+}
+#timeline.AdaptiveSearchTimeline.content-main {
+    width: 80%
+}
+/*User and image search timeline*/
+.has-items.GridTimeline-items, span.enabled.has-content.has-cards.grid-tweet.AdaptiveStreamGridImage:nth-of-type(n) {
+    position: relative;
+    left: 20% !important;
+}
+
+/*left dashboard*/
+.u-lg-size1of4.u-size1of3.Grid-cell{
+    position: fixed;
+    top: 175.5px;
+    left: 2%;
+    width: 22% !important;
+}
+
+.trends.Trends.module {
+    position: fixed;
+    top: 165px;
+    right: 2%;
+    width: 17%;
+}
 }
