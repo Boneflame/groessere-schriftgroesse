@@ -1,51 +1,38 @@
+:root {
+    --breit: 95%;
+    --main-font-size: 1rem;
+}
+
 /*title*/
 .ts {
-    font-size: 19px;
+    font-size: calc(var(--main-font-size) * 1.2);
 }
 
-
-/*post time, commentar*/
-.authi, .plm.plc {
-    font-size: 15px;
+.authi, .plm.plc,   /*post time, commentar*/
+.pstatus,           /*post modified time*/
+.cl.pob {           /*回复、评分、举报*/
+    font-size: var(--main-font-size);
 }
 
-
-/*post content*/
-.t_f {
-    font-size: 18px;
-}
-
-
-/*post modified time*/
-.pstatus {
-    font-size: 15px !important;
+.t_f,           /*post content*/
+.xw1, .pi {     /*ID name*/ 
+    font-size: calc(var(--main-font-size) * 1.1);
 }
 
 
 /*ID area*/
 .pls {
-    width: 12%;
-}
-dl.cl {
-    width: 100%;
-}
-.favatar.pls {
-    width: 185px;
-}
-.avatar {
-    margin: 10px auto;
+    width: calc(var(--main-font-size) * 11.5);
 }
 
-
-/*ID name*/
-.xw1, .pi {
-    font-size: 18px;
+/*个性签名*/
+.sign {
+    max-height: calc(var(--main-font-size) * 15) !important
 }
-
 
 /*ID info*/
 .xi2, .pls {
-    font-size: 16px !important;
+    font-size: calc(var(--main-font-size) * 0.9) !important;
 }
 dt {
     width: 45% !important;
@@ -55,7 +42,3 @@ dd {
 }
 
 
-/*回复、评分、举报*/
-.cl.pob {
-    font-size: 15px;
-}
