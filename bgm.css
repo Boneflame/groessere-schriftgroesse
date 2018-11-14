@@ -147,7 +147,7 @@ h1 {
 
 /*整个文字区域加宽*/
 #columnInSubjectA {
-    width: 150% !important
+    width: 96.5vw !important
 }
 
 /*楼层中的回复和引用*/
@@ -159,7 +159,7 @@ h1 {
 /*右上“返回”、“发新帖”*/
 .menu_inner {
     position: absolute;
-    right: -50%;
+    right: -31.5vw;
     top: 10px;
     width: 25%;
 }
