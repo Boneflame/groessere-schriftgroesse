@@ -62,7 +62,7 @@ div.clearit.item:nth-of-type(n), .entry {
     /*主显示区域、热门小组*/
     .home_title, .groupsLarge, .section, h1, #columnHomeA {
         position: relative;
-        left: calc(520px - 50vw); /* (100vw-1024px)*-0.5 */
+        left: calc(500px - 50vw); /* (100vw-1024px)*-0.5 */
         width: calc(97vw - var(--sidebar-width)) !important;
     }
     .groupsLarge > li:nth-of-type(n) {
@@ -100,6 +100,7 @@ div.clearit.item:nth-of-type(n), .entry {
         /*width: 28% !important;*/
     }
 }
+
 }
 
 @-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group/discover"), regexp("http(s|)://(bgm|bangumi)\\.tv/group") {
@@ -118,7 +119,7 @@ div.clearit.item:nth-of-type(n), .entry {
     /*帖子列表*/
     .topic_list {
         position: relative;
-        left: calc(520px - 50vw); /* (100vw-1024px)*-0.5 */
+        left: calc(500px - 50vw); /* (100vw-1024px)*-0.5 */
         width: calc(97vw - var(--sidebar-width)) !important;
     }
 }
@@ -135,19 +136,14 @@ div.clearit.item:nth-of-type(n), .entry {
     font-size: calc(var(--main-font-size) * 1.05) !important;
 }
 
-/*个性签名*/
-.tip_j {
-    font-size: var(--main-font-size) !important;
-}
-
 /*帖子标题*/
 h1 {
     left: 0% !important;
 }
 
-/*整个文字区域加宽*/
-#columnInSubjectA {
-    width: 96.5vw !important
+/*个性签名*/
+.tip_j {
+    font-size: var(--main-font-size) !important;
 }
 
 /*楼层中的回复和引用*/
@@ -156,31 +152,49 @@ h1 {
     max-width: 95% !important;
 }
 
-/*右上“返回”、“发新帖”*/
-.menu_inner {
-    position: absolute;
-    right: -31.5vw;
-    top: 10px;
-    width: 25%;
-}
-
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
+    /*整个文字区域加宽*/
+    #columnInSubjectA {
+        width: calc(1200px + 10vw)  !important
+    }
+    
     /*帖子主区域定位，楼层回复文字区域的宽度*/
     .clearit.columns {
         position: relative !important;
-        left: calc(500px - 50vw * var(--ratio)) !important;
-        width: calc(100vw * 0.555) !important;
+        left: calc(-100px - 5vw) !important;
+/*        width: 55.5vw !important;*/
+    }
+    
+    /*右上“返回”、“发新帖”*/
+    .menu_inner {
+        position: absolute;
+        right: calc(-200px - 10vw);     /* .clearit.columns若变宽，右边框位置会改变 */
+        top: 10px;
+        width: 25%;
     }
 }
 
 /*below 1366*/
 @media screen and (max-width: 1366px) and (min-width: 1024px) {
+    /*整个文字区域加宽*/
+    #columnInSubjectA {
+        width: 95vw !important
+    }
+    
     /*帖子主区域定位，楼层回复文字区域的宽度*/
     .clearit.columns {
         position: relative !important;
-        left: calc(520px - 50vw) !important;
-        width: calc(100vw * 0.654) !important;
+        left: calc(500px - 0.5 * 95vw) !important;
+        width: 100% !important;
+    }
+    
+    /*右上“返回”、“发新帖”*/
+    .menu_inner {
+        position: absolute;
+        right: calc(1000px - 95vw);      /* .clearit.columns若变宽，右边框位置会改变 */
+        top: 10px;
+        width: 25%;
     }
 }
 }
