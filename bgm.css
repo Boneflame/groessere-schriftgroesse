@@ -62,7 +62,7 @@ div.clearit.item:nth-of-type(n), .entry {
     /*主显示区域、热门小组*/
     .home_title, .groupsLarge, .section, h1, #columnHomeA {
         position: relative;
-        left: calc(500px - 50vw); /* (100vw-1024px)*-0.5 */
+        left: calc(520px - 50vw); /* (100vw-1024px)*-0.5 */
         width: calc(97vw - var(--sidebar-width)) !important;
     }
     .groupsLarge > li:nth-of-type(n) {
@@ -100,7 +100,6 @@ div.clearit.item:nth-of-type(n), .entry {
         /*width: 28% !important;*/
     }
 }
-
 }
 
 @-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group/discover"), regexp("http(s|)://(bgm|bangumi)\\.tv/group") {
@@ -119,7 +118,7 @@ div.clearit.item:nth-of-type(n), .entry {
     /*帖子列表*/
     .topic_list {
         position: relative;
-        left: calc(500px - 50vw); /* (100vw-1024px)*-0.5 */
+        left: calc(520px - 50vw); /* (100vw-1024px)*-0.5 */
         width: calc(97vw - var(--sidebar-width)) !important;
     }
 }
@@ -180,7 +179,7 @@ h1 {
     /*帖子主区域定位，楼层回复文字区域的宽度*/
     .clearit.columns {
         position: relative !important;
-        left: calc(500px - 50vw) !important;
+        left: calc(520px - 50vw) !important;
         width: calc(100vw * 0.654) !important;
     }
 }
