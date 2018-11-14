@@ -1,75 +1,181 @@
-@media screen and (min-width: 1366px) {
+@-moz-document domain("twitter.com") {
+:root {
+    --padding: 5px;
+    --sb-width: 290px;
+    --main-width: 85%;
+}
+
+/*home*/
+.tweet-text.js-tweet-text.TweetTextSize {
+    font-size: 1.1rem !important;
+    line-height: 1.4rem
+}
+
+/*user's homepage*/
+.js-short-timestamp._timestamp {
+    line-height: 1.8rem;
+}
+
+/*username*/
+.u-textTruncate.show-popup-with-id.fullname, .u-linkComplex-target.QuoteTweet-fullname {
+    font-size: 1.2rem !important;
+    line-height: 1.75rem;
+}
+
+.u-textTruncate.u-dir.username,
+.js-relative-timestamp.js-short-timestamp._timestamp,
+.with-icn.tweet-context,
+.u-textUserColorHover.translate-button.js-translate-tweet.btn-link {
+    --font-size: 1rem !important;
+}
+
+/*post time, buttom, translation*/
+.js-relative-timestamp.js-short-timestamp._timestamp,
+.with-icn.tweet-context,
+.u-textUserColorHover.translate-button.js-translate-tweet.btn-link,
+.js-actions.ProfileTweet-actionList {
+    font-size: 1rem;
+}
+
+/*notification*/
+.js-actionable-user.ActivityItem-displayText,
+.u-linkComplex-target.QuoteTweet-fullname,
+.ActivityItem-activityTimestamp,
+.u-linkComplex-target.QuoteTweet-fullname,
+.u-textTruncate.u-dir.username,
+.js-nav.QuoteTweet-link,
+.QuoteTweet-container,
+.fullname {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    vertical-align: bottom !important;
+}
+
+}
+
+@-moz-document regexp("https://twitter\\.com.*?\\?(?=lang).*"), regexp("https://twitter\\.com[^\\?]*") {
+@media screen and (max-width: 1439px) and (min-width: 1025px){
     /*main page*/
     /*timeline*/
-    #page-container {
-        width: 98%
-    }
     #timeline.top-timeline-tweetbox.content-main {
-        position: relative;
-        left: 21.5%;
-        width: 59.2%;
+        position: absolute;
+        left: calc(var(--sb-width));
+        width: calc(1218px - var(--sb-width));
     }
 
     /*left sidebar*/
     .dashboard-left.dashboard {
-        position: fixed;
-        left: 2%;
-        width: 20%;
+        position: absolute;
+        left: 0px;
+        width: var(--sb-width);
     }
 
     /*right sidebar*/
     .dashboard-right.dashboard {
-        position: fixed;
-        width: 17%;
-        right: 2%;
+        position: absolute;
+        left: 0px;
+        top: 750px;
     }
     
     /*Notification*/
     #timeline.light-inline-actions.content-main {
         position: absolute;
-        left: 22.15%;
-        width: 58.2%;
+        left: 305px;
+        width: calc(100vw - 305px);
     }
 
     /*Profile*/
-    /*main container*/
-    #page-container > .AppContainer, .u-bgUserColor.ProfileCanopy-header > .AppContainer, #page-container.AppContent {
-        position: absolute !important;
-        left: 0% !important;
-        min-width: 80%;
-        width: 98% !important;
-    }
-    /*Profile bg-image*/
-    .ProfileCanopy-inner {
-        width: 102% !important;
+    /*right sidebar*/
+    .SidebarCommonModules {
+        position: absolute;
+        left: 0px !important;
+        top: 800px;
+        width: 300px;
     }
     /*timeline and provide user*/
     .u-lg-size2of3, .u-lg-size4of6, .u-lg-size8of12, .ProfileClusterFollow {
         position: relative;
-        left: 17%;
+        left: 10px;
         width: 100% !important
     }
-    
-    /*avatar*/
-    .ProfileAvatar {
-        position: relative;
-        left: 50%;
-        top: 65%
-    }
+}
 
+
+@media screen and (min-width: 1440px) {
+    /*main page*/
     /*left sidebar*/
-    .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
-        position: absolute;
-        left: 2% !important;
-        width: 35%
+    .dashboard-left.dashboard {
+        position: fixed;
+        left: calc((100vw - 1430px) * 0.2)
     }
 
     /*right sidebar*/
+    .dashboard-right.dashboard {
+        position: fixed;
+        right: calc((100vw - 1430px) * 0.2)
+    }
+    
+    #timeline.top-timeline-tweetbox.content-main {
+        position: relative;
+        left: calc((100vw - 1430px) * 0.2 + 275px + 610px - 50vw);
+        width: calc(60vw + 572px - 2.06 * var(--sb-width));
+    }
+
+    /*Notification*/
+    #timeline.light-inline-actions.content-main {
+        position: absolute;
+        left: calc((100vw - 1430px) * 0.2 + var(--sb-width) + 610px - 50vw);
+        width: calc(60vw + 572px - 2.06 * var(--sb-width));
+    }
+
+    /*Profile*/
+    /*main container*/
+/*    #page-container > .AppContainer, .u-bgUserColor.ProfileCanopy-header > .AppContainer, #page-container.AppContent {
+        position: absolute !important;
+        left: 0% !important;
+        min-width: 80%;
+        width: 98% !important;
+    }*/
+    /*Profile bg-image*/
+/*    .ProfileCanopy-inner {
+        width: 102% !important;
+    }*/
+    
+    /*left sidebar*/
+    .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
+        position: relative;
+        left: calc(315px - 30vw) !important;
+        width: 140%
+    }
+
+    /*avatar*/
+    .ProfileAvatar {
+        position: relative;
+        left: calc(315px - 25.5vw);
+        top: 65%
+    }
+    
+    /*right sidebar*/
     .SidebarCommonModules {
         position: absolute;
-        left: 2% !important;
-        top: 500px;
-        width: 32%
-        
+        right: calc(315px - 30vw) !important;
+        top: 0%;
+        width: var(--sb-width);
     }
+    
+    /*timeline and provide user*/
+    .u-lg-size2of3, .u-lg-size4of6, .u-lg-size8of12, .ProfileClusterFollow {
+        position: absolute;
+        left: calc(690px - 30vw);
+        width: calc(60vw - 110px) !important
+    }        
+}
+}
+
+@-moz-document regexp("https://twitter\\.com/hashtag.*"), regexp("https://twitter\\.com/search.*") {
+/*timeline*/
+.u-lg-size2of3.u-size2of2.Grid-cell, .stream-fail-container, .stream-container {
+    width: 880px;
+}
+
 }
