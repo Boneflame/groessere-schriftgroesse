@@ -59,7 +59,7 @@
     /*timeline*/
     #timeline.top-timeline-tweetbox.content-main {
         position: absolute;
-        left: calc(var(--sb-width));
+        left: var(--sb-width);
         width: calc(1218px - var(--sb-width));
     }
 
@@ -117,7 +117,7 @@
     
     #timeline.top-timeline-tweetbox.content-main {
         position: relative;
-        left: calc((100vw - 1430px) * 0.2 + 275px + 610px - 50vw);
+        left: calc((100vw - 1430px) * 0.2 + 275px + 608px - 50vw);
         width: calc(60vw + 572px - 2.06 * var(--sb-width));
     }
 
@@ -129,23 +129,11 @@
     }
 
     /*Profile*/
-    /*main container*/
-/*    #page-container > .AppContainer, .u-bgUserColor.ProfileCanopy-header > .AppContainer, #page-container.AppContent {
-        position: absolute !important;
-        left: 0% !important;
-        min-width: 80%;
-        width: 98% !important;
-    }*/
-    /*Profile bg-image*/
-/*    .ProfileCanopy-inner {
-        width: 102% !important;
-    }*/
-    
     /*left sidebar*/
     .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
         position: relative;
         left: calc(315px - 30vw) !important;
-        width: 140%
+        width: 20.3vw
     }
 
     /*avatar*/
@@ -178,4 +166,63 @@
     width: 880px;
 }
 
+}
+
+@-moz-document regexp("https://twitter\\.com/followers"), regexp("https://twitter\\.com/following") {
+.dashboard-left.dashboard, .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell, .SidebarCommonModules {
+    position: relative;
+    left: -1% !important;
+    right: auto !important;
+    width: 300px !important;
+    top: auto !important;
+}
+
+.ProfileAvatar {
+    left: 0% !important
+}
+}
+
+@-moz-document domain("twitter.com") {
+/* Based on https://userstyles.org/styles/151666/twitter-better-expanded-media */
+
+/*Expand gallery*/
+.AdaptiveMedia-doublePhoto,
+.AdaptiveMedia-triplePhoto,
+.AdaptiveMedia-quadPhoto,
+.AdaptiveMedia-halfWidthPhoto,
+.AdaptiveMedia-twoThirdsWidthPhoto,
+.AdaptiveMedia-threeQuartersWidthPhoto,
+.AdaptiveMedia-halfHeightPhoto,
+.AdaptiveMedia-halfHeightPhotoContainer,
+.AdaptiveMedia-thirdHeightPhoto,
+.AdaptiveMedia-thirdHeightPhotoContainer,
+.AdaptiveMedia-photoContainer img {
+    display: inline !important;
+    position: static !important;
+    max-width: 100% !important;     /*width of img will not overflowed*/
+    width: fit-content !important;  /*Make img show it's true width*/
+}
+
+/*Max out the window*/
+.AdaptiveMedia {
+    max-height: none !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+
+/*Delete image's bg-color*/
+.js-adaptive-photo.AdaptiveMedia-photoContainer {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+/*Add blank between images*/
+/*
+.AdaptiveMedia-photoContainer.js-adaptive-photo:before {
+    content: "";
+    display: inline-block;
+    padding-bottom: 10px;
+    width: .1px;
+    vertical-align: middle;
+}*/
 }
