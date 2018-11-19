@@ -1,0 +1,14 @@
+@-moz-document domain("inoreader.com") {
+:root {
+    --width: 85vw;
+}
+
+#article_dialog_wrapper {
+    width: var(--width) !important;
+    left: calc(50vw - 0.5 * var(--width));
+}
+
+#article_dialog, .article_content {
+    max-width: var(--width) !important;
+}
+}
