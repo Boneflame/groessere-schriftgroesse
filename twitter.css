@@ -122,7 +122,8 @@
     }
 
     /*Notification*/
-    #timeline.light-inline-actions.content-main {
+    #timeline.light-inline-actions.content-main,    /*main timeline*/
+    #timeline.list.content-main {                   /*timeline of list*/
         position: absolute;
         left: calc((100vw - 1430px) * 0.2 + var(--sb-width) + 610px - 50vw);
         width: calc(60vw + 572px - 2.06 * var(--sb-width));
@@ -207,6 +208,7 @@
 .AdaptiveMedia {
     max-height: none !important;
     max-width: 100% !important;
+    min-height: 100px;
     border-radius: 0 !important;
     border: 0 !important;
 }
@@ -217,12 +219,12 @@
 }
 
 /*Add blank between images*/
-/*
+
 .AdaptiveMedia-photoContainer.js-adaptive-photo:before {
     content: "";
     display: inline-block;
     padding-bottom: 10px;
     width: .1px;
     vertical-align: middle;
-}*/
+}
 }
