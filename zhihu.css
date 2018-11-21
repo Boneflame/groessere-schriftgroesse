@@ -58,7 +58,7 @@
 }
 
 /*below 1366*/
-@media screen and (max-width: 1366px) and (min-width: 1200px) {
+@media screen and (max-width: 1366px) {
     .AppHeader-inner,                                                            /*顶栏*/
     .QuestionHeader-content, .QuestionHeader-main, .QuestionHeader-footer-inner /*问题描述区域*/{                                                             
         width: var(--custom_width);
@@ -87,6 +87,18 @@
 
 @-moz-document domain("zhuanlan.zhihu.com") {
 /*知乎专栏*/
+
+/*把底部bar移到顶部*/
+.is-bottom.is-fixed.RichContent-actions.Sticky {
+    top:0;
+    height: 0px;
+}
+
+.ContentItem-actions {
+    height: 30px !important;
+    left: 130px;
+}
+
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
     .Column-ArticleList {
@@ -97,7 +109,8 @@
     
     /*顶栏*/
     .ColumnPageHeader-content {
-        width: calc(var( --breit) * 0.94);
+       /* width: calc(var( --breit) * 0.94);*/
+       width: var( --breit);
     }
 
     /*文字列表摘要，文章正文，评论中的回复*/
@@ -107,12 +120,12 @@
 
     /*正文区域加宽*/
     .Post-Header, .Post-NormalMain > div, .TitleImage {
-        width: var( --breit) !important;
+        width: var(--breit) !important;
     }
 
     /*分享按钮*/
     .Post-SideActions {
-        left: 4%
+        left: calc(0.13 * (100% - var(--breit)));
     }
 
     /*右上按钮*/
@@ -128,7 +141,7 @@
 
 
 /*below 1366px*/
-@media screen and (max-width: 1366px) and (min-width: 1200px) {
+@media screen and (max-width: 1366px) {
     .Column-ArticleList {
         position: absolute !important;
         width: 97% !important;
@@ -192,7 +205,7 @@
 }
 
 /*below 1366px*/
-@media screen and (max-width: 1366px) and (min-width: 1200px) {
+@media screen and (max-width: 1366px) {
     .ProfileHeader, .Profile-main {
         width: 100%;
         padding-left: 0px;
@@ -224,7 +237,7 @@
 }
 
 
-@media screen and (max-width: 1366px) and (min-width: 1200px) {
+@media screen and (max-width: 1366px) {
     /*顶栏*/
     #zh-top-inner.clearfix.modal-shifting.zg-wrap {
         width: 97%;
