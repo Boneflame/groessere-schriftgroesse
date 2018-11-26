@@ -210,7 +210,7 @@ h1 {
 
 @media screen and (min-width: 1367px) {
     /*主显示区域*/
-    #columnA, #comment_list {
+    #columnA {
         position: relative;
         left: calc(-100px - 5vw) !important;
         width: calc(1200px + 10vw)  !important
