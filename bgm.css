@@ -16,7 +16,10 @@
 }
 
 /*font size*/
-.l, .message, .inner {
+h1 {
+    font-size: calc(var(--main-font-size) * 1.2) !important;
+}
+.l, .message, .inner, #entry_content, .clearit.blog_entry, #viewEntry.clearit, #columnA, .clearit.columns {
     font-size: calc(var(--main-font-size) * 1.05);
 }
 li.airYear:nth-of-type(n) > .l, #futureAirTime > .l, #pastAirTime > .l  {
@@ -195,6 +198,39 @@ h1 {
         right: calc(1000px - 95vw);      /* .clearit.columns若变宽，右边框位置会改变 */
         top: 10px;
         width: 25%;
+    }
+}
+}
+
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/blog.*") {
+/*正文，第一条回复*/
+#entry_content, .clearit.message {
+    font-size: calc(var(--main-font-size) * 1.05) !important;
+}
+
+@media screen and (min-width: 1367px) {
+    /*主显示区域*/
+    #columnA, #comment_list {
+        position: relative;
+        left: calc(-100px - 5vw) !important;
+        width: calc(1200px + 10vw)  !important
+    }
+    /*title*/
+    h1 {
+        left: 1% !important;
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    /*主显示区域*/
+    #columnA {
+        position: relative;
+        left: calc(500px - 0.5 * 95vw) !important;
+        width: 95vw !important;
+    }
+    /*title*/
+    h1 {
+        left: 1% !important;
     }
 }
 }
