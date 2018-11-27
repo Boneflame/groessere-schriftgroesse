@@ -1,7 +1,7 @@
 @-moz-document domain("twitter.com") {
 :root {
     --padding: 5px;
-    --sb-width: 290px;
+    --right-sidebar-width: 290px;
     --main-width: 85%;
 }
 
@@ -50,7 +50,6 @@
     line-height: 1.8rem;
     vertical-align: bottom !important;
 }
-
 }
 
 @-moz-document regexp("https://twitter\\.com.*?\\?(?=lang).*"), regexp("https://twitter\\.com[^\\?]*") {
@@ -59,15 +58,15 @@
     /*timeline*/
     #timeline.top-timeline-tweetbox.content-main {
         position: absolute;
-        left: var(--sb-width);
-        width: calc(1218px - var(--sb-width));
+        left: var(--right-sidebar-width);
+        width: calc(1218px - var(--right-sidebar-width));
     }
 
     /*left sidebar*/
     .dashboard-left.dashboard {
         position: absolute;
         left: 0px;
-        width: var(--sb-width);
+        width: var(--right-sidebar-width);
     }
 
     /*right sidebar*/
@@ -79,7 +78,7 @@
     
     /*Notification*/
     #timeline.light-inline-actions.content-main {
-        position: absolute;
+        position: relative;
         left: 305px;
         width: calc(100vw - 305px);
     }
@@ -118,15 +117,15 @@
     #timeline.top-timeline-tweetbox.content-main {
         position: relative;
         left: calc((100vw - 1430px) * 0.2 + 275px + 608px - 50vw);
-        width: calc(60vw + 572px - 2.06 * var(--sb-width));
+        width: calc(60vw + 572px - 2.06 * var(--right-sidebar-width));
     }
 
     /*Notification*/
     #timeline.light-inline-actions.content-main,    /*main timeline*/
     #timeline.list.content-main {                   /*timeline of list*/
         position: absolute;
-        left: calc((100vw - 1430px) * 0.2 + var(--sb-width) + 610px - 50vw);
-        width: calc(60vw + 572px - 2.06 * var(--sb-width));
+        left: calc((100vw - 1430px) * 0.2 + var(--right-sidebar-width) + 610px - 50vw);
+        width: calc(60vw + 572px - 2.06 * var(--right-sidebar-width));
     }
 
     /*Profile*/
@@ -134,14 +133,14 @@
     .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell {
         position: relative;
         left: calc(315px - 30vw) !important;
-        width: 20.3vw
+        width: 20.3vw;
     }
 
     /*avatar*/
     .ProfileAvatar {
         position: relative;
         left: calc(315px - 25.5vw);
-        top: 65%
+        top: 65%;
     }
     
     /*right sidebar*/
@@ -149,14 +148,14 @@
         position: absolute;
         right: calc(315px - 30vw) !important;
         top: 0%;
-        width: var(--sb-width);
+        width: var(--right-sidebar-width);
     }
     
     /*timeline and provide user*/
     .u-lg-size2of3, .u-lg-size4of6, .u-lg-size8of12, .ProfileClusterFollow {
-        position: absolute;
-        left: calc(690px - 30vw);
-        width: calc(60vw - 110px) !important
+        position: relative;
+        left: calc(10px - 9.7vw);
+        width: calc(560px + 39.7vw - var(--right-sidebar-width)) !important;
     }        
 }
 }
@@ -166,10 +165,9 @@
 .u-lg-size2of3.u-size2of2.Grid-cell, .stream-fail-container, .stream-container {
     width: 880px;
 }
-
 }
 
-@-moz-document regexp("https://twitter\\.com/followers"), regexp("https://twitter\\.com/following") {
+@-moz-document regexp("https://twitter\\.com(/[^/]*?|)/followers"), regexp("https://twitter\\.com(/[^/]*?|)/following") {
 .dashboard-left.dashboard, .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell, .SidebarCommonModules {
     position: relative;
     left: -1% !important;
@@ -218,8 +216,12 @@
     background-color: rgba(0,0,0,0) !important;
 }
 
-/*Add blank between images*/
+/*make bg fit the img. when click the blank area will show tweet rather than img*/
+.AdaptiveMedia-photoContainer.js-adaptive-photo {
+    width: fit-content;
+}
 
+/*Add blank between images*/
 .AdaptiveMedia-photoContainer.js-adaptive-photo:before {
     content: "";
     display: inline-block;
