@@ -16,4 +16,24 @@
 .comments_title, .comments_body, .comments_wrap {
     width: calc(0.938*var(--width))
 }
+
+
+/*hide ads rather than block them*/
+/*right side*/
+#sinner_container {
+    display: none !important;
+    position: absolute;
+    max-width:0;
+    left:-20px !important
+}
+
+/*top*/
+.sinner.ad_size_leaderboard.leaderboard_ad.block_article_ad, .ad_title.ad_title_centered {
+    display: none;
+}
+
+/*expand read area*/
+#reader_pane {
+    width: calc(100vw - 270px) !important;
+}
 }
