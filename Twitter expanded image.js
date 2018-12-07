@@ -1,11 +1,17 @@
 // ==UserScript==
-// @name         Twitter expanded image
-// @namespace    https://github.com/Boneflame/groessere-schriftgroesse
-// @version      0.1
-// @description  Replace image address to original and adjust single image's height. Work in with https://userstyles.org/styles/165662/expanded-twitter
-// @author       Hitomi Jamella Hoshino
-// @include      https://twitter.com/*
-// @grant        none
+// @name              Twitter expanded image
+// @name:en           Twitter expanded image
+// @name:zh-CN        Twitter expanded image
+// @name:de           Twitter expanded image
+// @namespace         https://github.com/Boneflame/groessere-schriftgroesse
+// @require
+// @version           0.2.1
+// @description       Replace image address to original and adjust single image's height. Work in with https://userstyles.org/styles/165662/expanded-twitter
+// @description:zh-cn 替换推特图片为原图，并让每条推的高度适应图片高度。作为该CSS的辅助脚本：https://userstyles.org/styles/165662/expanded-twitter
+// @description:de    Das Skript ändert die Adresse des Bild zu originale Adresse und lässt die Höhe eines Tweet sich an das Bild anpassen. 
+// @author            Hitomi Jamella Hoshino
+// @include           https://twitter.com/*
+// @grant             none
 // ==/UserScript==
 
 
@@ -28,7 +34,7 @@ new MutationObserver(replace).observe(document.getElementsByClassName("stream-it
 
 //Adjust image's height
 
-var stream_Width = document.getElementsByClassName("AdaptiveMedia-photoContainer")[0].clientWidth;
+var stream_Width = document.getElementsByClassName("AdaptiveMedia-container")[0].clientWidth;
 var single_photo, Bild, nWidth, nHeight, i;
 //i = amount of single image that after site first load + keeping scroll down.
 //var i = 0;
