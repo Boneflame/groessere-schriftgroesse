@@ -5,13 +5,13 @@
 }
 
 
-/*文件标题*/
+/*title of the file*/
 .audio_player_title_wrap {
     height: 1.4rem !important;
 }
 
 
-/*未读计数*/
+/*unread counter*/
 .im_dialog_badge_muted.badge.im_dialog_badge {
     line-height: 0.6rem !important;
     font-size: 14px !important;
@@ -20,6 +20,10 @@
     height: 1.75rem !important;
 }
 
+/*hide massage date, which under every ID in group*/
+.copyonly {
+    display: none;
+}
 
 /*group info popup*/
 .modal-content.modal-content-animated {
