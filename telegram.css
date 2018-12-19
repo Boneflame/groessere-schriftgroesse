@@ -1,3 +1,4 @@
+@-moz-document domain("web.telegram.org") {
 /*group list height*/
 .im_dialog, .im_dialog_message_wrap, .im_short_message_service {
     height: 4.8rem !important;
@@ -35,4 +36,5 @@
     top: 80% !important;
     width: 15% !important;
     height: 35% !important
+}
 }
