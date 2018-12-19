@@ -21,8 +21,10 @@
 
 
 /*group info popup*/
-.md_modal_iconed_section_peers.md_modal_iconed_section_wrap, .md_modal_body, .md_modal_wrap.chat_modal_wrap, .md_modal_head {
-    width: 120% !important;
+.modal-content.modal-content-animated {
+    position: relative;
+    width: 900px !important;
+    left: calc(-0.5*(900px - 480px));
 }
 
 
