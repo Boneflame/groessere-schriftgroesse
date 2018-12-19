@@ -1,3 +1,4 @@
+@-moz-document domain("inoreader.com") {
 :root {
     --width: 85vw;
 }
@@ -20,7 +21,13 @@
 /*hide ads rather than block them*/
 /*right side*/
 #sinner_container {
-    position: relative;
+    position: absolute !important;
+    right: -500px !important;
+}
+
+/*read area right align*/
+#reader_pane {
+    right: -200px !important;
 }
 
 /*top*/
@@ -33,4 +40,5 @@
 .sinner.ad_size_large_rectangle.leaderboard_ad.leaderboard_ad.block_article_ad_bottom.block_article_ad_bottom.block_article_ad {
     position: relative !important;
     bottom: -800px !important;
+}
 }
