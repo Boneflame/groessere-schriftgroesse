@@ -1,6 +1,7 @@
+@-moz-document domain("bbs.saraba1st.com") {
 :root {
     --breit: 95%;
-    --main-font-size: 1rem;
+    --main-font-size: 1.1rem;
 }
 
 /*title*/
@@ -41,4 +42,4 @@ dd {
     width: 50% !important;
 }
 
-
+}
