@@ -1,6 +1,6 @@
 @-moz-document domain("bgm.tv"), domain("bangumi.tv") {
 :root {
-    --main-font-size: 1rem;
+    --main-font-size: 1.05rem;
     --sidebar-width: 320px;
     --ratio: 0.85;
     --main-width: 85%;
@@ -103,10 +103,9 @@ div.clearit.item:nth-of-type(n), .entry {
         /*width: 28% !important;*/
     }
 }
-
 }
 
-@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group/discover"), regexp("http(s|)://(bgm|bangumi)\\.tv/group") {
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group/[^/]+") {
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
     /*帖子列表*/
