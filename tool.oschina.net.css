@@ -1,3 +1,14 @@
-.span8, .input-prepend, #textPattern, #textSour, #textReplace, #textMatchResult, #textReplaceResult {
-    width: 100% !important
+@-moz-document domain("tool.oschina.net") {
+.span8, .input-prepend, #textSour, #textMatchResult, #textReplaceResult {
+    width: 130% !important;
+}
+
+#textPattern, #textReplace {
+    width: 100% !important;
+}
+
+.span8 {
+    position: relative;
+    left: -30%;
+}
 }
