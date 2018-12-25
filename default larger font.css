@@ -1,0 +1,28 @@
+p, 
+.comment-html, .quote-comments-con,      /*cnbeta comment*/
+.article-content {                       /*cnbeta text*/
+    font-size: 20px;
+}
+
+@-moz-document domain("music.163.com") {
+p, .f-brk.cnt, .s-fc3.f-pr.f-brk.que {
+    font-size: 0.8rem !important;
+}
+}
+
+@-moz-document domain("plus.google.com") {
+.jVjeQd,                                 /*text*/
+.sXku1c, .NCFA5c.eYSPjc, .sRhiGb.eYSPjc, /*id & share circle*/
+.vGowKb, .g6UaYd,                        /*id, text in comment, expanded*/
+.X865Z {                                 /*id, text in comment, not expanded*/
+    font-size: 1rem !important;
+}
+
+.NCFA5c.eYSPjc {
+    line-height: 1.25rem;
+}
+
+.jVjeQd, .Wj5EM, .g6UaYd {        /*text, comment*/
+    line-height: 1.3rem;
+}
+}
