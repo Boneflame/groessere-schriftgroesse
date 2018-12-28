@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         zhuanlan zhihu img
+// @name         zhihu img
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Replace img of zhuanlan to original
+// @description  Replace img of zhihu to original
 // @author       Hitomi Jamella Hoshino
 // @include      https://zhuanlan.zhihu.com/*
+// @include      https://www.zhihu.com/*
 // @grant        none
 // ==/UserScript==
 
