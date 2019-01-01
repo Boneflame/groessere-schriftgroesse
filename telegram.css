@@ -5,13 +5,13 @@
 }
 
 
-/*title of the file*/
+/*文件标题*/
 .audio_player_title_wrap {
     height: 1.4rem !important;
 }
 
 
-/*unread counter*/
+/*未读计数*/
 .im_dialog_badge_muted.badge.im_dialog_badge {
     line-height: 0.6rem !important;
     font-size: 14px !important;
@@ -32,6 +32,10 @@
     left: calc(-0.5*(900px - 480px));
 }
 
+/*dialog popup*/
+.im_dialogs_modal_col {
+    height: 80vh !important;
+}
 
 /*sticker position fix for Telegram ESI*/
 .composer_emoji_tooltip.noselect.composer_emoji_tooltip_tabs_stickers_active, .composer_emoji_tooltip.noselect.composer_emoji_tooltip_shown {
