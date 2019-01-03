@@ -20,6 +20,15 @@
     height: 1.75rem !important;
 }
 
+/*sticker position fix for Telegram ESI*/
+.composer_emoji_tooltip.noselect.composer_emoji_tooltip_tabs_stickers_active, .composer_emoji_tooltip.noselect.composer_emoji_tooltip_shown {
+    position: absolute !important;
+    left: 85% !important;
+    top: 80% !important;
+    width: 15% !important;
+    height: 35% !important
+}
+
 /*hide massage date, which under every ID in group*/
 .copyonly {
     display: none;
@@ -37,12 +46,15 @@
     height: 80vh !important;
 }
 
-/*sticker position fix for Telegram ESI*/
-.composer_emoji_tooltip.noselect.composer_emoji_tooltip_tabs_stickers_active, .composer_emoji_tooltip.noselect.composer_emoji_tooltip_shown {
-    position: absolute !important;
-    left: 85% !important;
-    top: 80% !important;
-    width: 15% !important;
-    height: 35% !important
+/*bot dropdown menu*/
+/*.composer_dropdown_wrap, .scroller_scrollable_container, .active-scrollbar.nano.scroller_scrollable_wrap, .nano-content.scroller_scrollable*/
+/*.composer_dropdown.inline_results_wrap*/
+.composer_dropdown_wrap, .scroller_scrollable_container {
+    top: 300px !important;
+    height: 525px;
+}
+
+.active-scrollbar.nano.scroller_scrollable_wrap {
+    height: 525px;
 }
 }
