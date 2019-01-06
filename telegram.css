@@ -49,7 +49,7 @@
 /*bot dropdown menu*/
 /*.composer_dropdown_wrap, .scroller_scrollable_container, .active-scrollbar.nano.scroller_scrollable_wrap, .nano-content.scroller_scrollable*/
 /*.composer_dropdown.inline_results_wrap*/
-.composer_dropdown_wrap, .scroller_scrollable_container {
+.composer_dropdown_wrap, .composer_dropdown_wrap >.scroller_scrollable_container {
     top: 300px !important;
     height: 525px;
 }
