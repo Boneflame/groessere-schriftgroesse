@@ -1,17 +1,23 @@
 @-moz-document domain("web.telegram.org") {
+:root {
+    --sticker-popup-height: 750px;
+    --sticker-popup-width: 550px;
+}
+
+
 /*group list height*/
 .im_dialog, .im_dialog_message_wrap, .im_short_message_service {
     height: 4.8rem !important;
 }
 
 
-/*文件标题*/
+/*title of file*/
 .audio_player_title_wrap {
     height: 1.4rem !important;
 }
 
 
-/*未读计数*/
+/*unread counter*/
 .im_dialog_badge_muted.badge.im_dialog_badge {
     line-height: 0.6rem !important;
     font-size: 14px !important;
@@ -20,19 +26,12 @@
     height: 1.75rem !important;
 }
 
-/*sticker position fix for Telegram ESI*/
-.composer_emoji_tooltip.noselect.composer_emoji_tooltip_tabs_stickers_active, .composer_emoji_tooltip.noselect.composer_emoji_tooltip_shown {
-    position: absolute !important;
-    left: 85% !important;
-    top: 80% !important;
-    width: 15% !important;
-    height: 35% !important
-}
 
 /*hide massage date, which under every ID in group*/
 .copyonly {
     display: none;
 }
+
 
 /*group info popup*/
 .modal-content.modal-content-animated {
@@ -41,10 +40,12 @@
     left: calc(-0.5*(900px - 480px));
 }
 
+
 /*dialog popup*/
 .im_dialogs_modal_col {
     height: 80vh !important;
 }
+
 
 /*bot dropdown menu*/
 /*.composer_dropdown_wrap, .scroller_scrollable_container, .active-scrollbar.nano.scroller_scrollable_wrap, .nano-content.scroller_scrollable*/
@@ -53,8 +54,61 @@
     top: 300px !important;
     height: 525px;
 }
-
-.active-scrollbar.nano.scroller_scrollable_wrap {
-    height: 525px;
+.composer_dropdown_wrap > .scroller_scrollable_container > .active-scrollbar.nano.scroller_scrollable_wrap,
+.composer_dropdown_wrap > .scroller_scrollable_container > .nano.scroller_scrollable_wrap {     /*bing bot*/
+    max-height: 525px;
 }
+
+
+/*sticker position fix for Telegram ESI*/
+/*size and position of sticker popup*/
+.composer_emoji_tooltip_shown.composer_emoji_tooltip_tabs_stickers_active.noselect.composer_emoji_tooltip, .composer_emoji_tooltip_shown.noselect.composer_emoji_tooltip {
+    position: absolute !important;
+    left: calc(100vw - var(--sticker-popup-width)) !important;
+    top: calc(100vh - var(--sticker-popup-height) + 180px) !important;
+    width: var(--sticker-popup-width) !important;
+    height: var(--sticker-popup-height) !important;
+}
+
+/*size of sticker & emoji area*/
+.composer_emoji_tooltip_content_wrap > .scroller_scrollable_container > .active-scrollbar.nano.scroller_scrollable_wrap,
+.composer_emoji_tooltip_tabs_wrap {
+    height: var(--sticker-popup-height);
+    width: var(--sticker-popup-width);
+}
+
+/*size of emoji area*/
+.composer_emoji_tooltip_tab_emoji_content > .composer_emoji_tooltip_content_wrap > .scroller_scrollable_container > .nano.scroller_scrollable_wrap {
+    width: var(--sticker-popup-width);
+    height: var(--sticker-popup-height);
+}
+
+/*size and position of sticker area*/
+.composer_emoji_tooltip_tab_stickers_content {
+    position: relative;
+    left: calc(var(--sticker-popup-width));
+    top: calc(-0.36 * var(--sticker-popup-height));
+    width: var(--sticker-popup-width);
+    height: var(--sticker-popup-height);
+}
+
+/*height of sticker area, sticker catalogreis area should not be overlaped*/
+.nano-content.scroller_scrollable {
+    height: calc(var(--sticker-popup-height) - 90px);
+}
+
+/*position of sticker catalogreis area*/
+.composer_emoji_tooltip_categories {
+    top: calc(0.565 * var(--sticker-popup-height)) !important;
+    width: var(--sticker-popup-width);
+}
+
+/*Bewegungsteil*/
+.non_msie .composer_emoji_tooltip_tabs_stickers_active .composer_emoji_tooltip_tabs_contents{-webkit-transform:translate3d(-560px,0,0);-moz-transform:translate3d(-560px,0,0);-o-transform:translate3d(-560px,0,0);-ms-transform:translate3d(-560px,0,0);transform:translate3d(-560px,0,0)}
+
+/*size of sticker img*/
+/*.composer_sticker_image {
+    width: 100px !important;
+    height: 100px !important;
+}*/
 }
