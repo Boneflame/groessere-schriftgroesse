@@ -1,7 +1,7 @@
-@-moz-document domain("bbs.saraba1st.com") {
+@-moz-document domain("bbs.saraba1st.com"), domain("www.saraba1st.com") {
 :root {
     --breit: 95%;
-    --main-font-size: 1.1rem;
+    --main-font-size: 1.05rem;
 }
 
 /*title*/
@@ -40,6 +40,11 @@ dt {
 }
 dd {
     width: 50% !important;
+}
+
+/*帖子列表*/
+.bm_c, .xst.s, .td:nth-child(n) {
+    font-size: var(--main-font-size);
 }
 
 }
