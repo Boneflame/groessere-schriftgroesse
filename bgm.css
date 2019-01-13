@@ -45,6 +45,22 @@ div.clearit.item:nth-of-type(n), .entry {
 }
 
 
+/*好友最近关注的*/
+#columnA > div:nth-child(n) > div > ul > li:nth-child(n) {
+    width: 110px;
+}
+
+
+/*Bangumi成员关注榜*/
+#chl_subitem > ul > li:nth-child(n) > span, #chl_subitem > ul > li:nth-child(n) {
+    width: 300px;
+    height: 70px;
+}
+div#chl_subitem > ul > li > span {
+    float: none;
+}
+
+
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
     /*主显示区域、热门小组*/
