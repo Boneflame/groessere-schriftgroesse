@@ -7,13 +7,6 @@
     --var-width: 100%;
 }
 
-/*顶栏导航、底部“关于”*/
-#navMenuNeue.clearit, #footerLinks.clearit {
-    width: 110%
-}
-.clearit.headerNeueInner {
-    width: var(--main-width) !important
-}
 
 /*font size*/
 h1 {
@@ -33,6 +26,22 @@ div.clearit.item:nth-of-type(n), .entry {
 .time {
     height: calc(var(--main-font-size) * 2.2) !important;
     line-height: calc(var(--main-font-size) * 1.1) !important
+}
+
+
+/*顶栏导航、底部“关于”*/
+#navMenuNeue.clearit, #footerLinks.clearit {
+    width: 110%
+}
+.clearit.headerNeueInner {
+    width: var(--main-width) !important
+}
+
+
+/*首页每部作品块的宽度，多列显示*/
+#cloumnSubjectInfo .tinyMode {
+    width: 390px;
+    clear: none !important;
 }
 
 
@@ -105,7 +114,7 @@ div.clearit.item:nth-of-type(n), .entry {
 }
 }
 
-@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group/[^/]+") {
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group(/|)[^/]*") {
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
     /*帖子列表*/
@@ -127,7 +136,7 @@ div.clearit.item:nth-of-type(n), .entry {
 }
 }
 
-@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group/topic/.*") {
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/.*?/topic/.*") {
 /*楼主ID*/
 .avatar.l, .sub_title, .l {
     font-size: calc(var(--main-font-size) * 1.1);
@@ -173,7 +182,7 @@ h1 {
         position: absolute;
         right: calc(-200px - 10vw);     /* .clearit.columns若变宽，右边框位置会改变 */
         top: 10px;
-        width: 25%;
+        width: 30%;
     }
 }
 
@@ -196,7 +205,7 @@ h1 {
         position: absolute;
         right: calc(1000px - 95vw);      /* .clearit.columns若变宽，右边框位置会改变 */
         top: 10px;
-        width: 25%;
+        width: 30%;
     }
 }
 }
