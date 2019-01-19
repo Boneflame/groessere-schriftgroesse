@@ -61,6 +61,28 @@ div#chl_subitem > ul > li > span {
 }
 
 
+/*搜索页面*/
+#columnSearchA {
+    position: relative;
+    left: calc(1000px - 60vw);
+    width: 120px;
+}
+#columnSearchB {
+    position: relative;
+    top: -420px;
+    width: 50vw;
+}
+#columnSearchC {
+    position: relative;
+    top: -1800px;
+    left: calc(50vw + 20px);
+    width: 300px;
+}
+/*相关人物*/
+dl.side_port {
+    width: 90px !important;
+}
+
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
     /*主显示区域、热门小组*/
@@ -130,7 +152,7 @@ div#chl_subitem > ul > li > span {
 }
 }
 
-@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group(/|)[^/]*") {
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/group(/|)[^/]*"), regexp("http(s|)://(bgm|bangumi)\\.tv/group/[^/]*?/forum.*") {
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
     /*帖子列表*/
@@ -256,5 +278,14 @@ h1 {
     h1 {
         left: 1% !important;
     }
+}
+}
+
+@-moz-document regexp("http(s|)://bgm.tv/mono") {
+/*右边栏*/
+#columnChlCrtB {
+    position: relative;
+    left: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97 - 696px) * 0.5);
+    width: 280px;
 }
 }
