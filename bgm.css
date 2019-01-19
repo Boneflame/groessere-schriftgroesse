@@ -112,7 +112,7 @@ dl.side_port {
     /*主显示区域、热门小组*/
     .home_title, .groupsLarge, .section, h1, #columnHomeA {
         position: relative;
-        left: calc(500px - 50vw); /* (100vw-1024px)*-0.5 */
+        left: calc(500px - 50vw + 10px); /* (100vw-1024px)*-0.5 */
         width: calc(97vw - var(--sidebar-width)) !important;
     }
     .groupsLarge > li:nth-of-type(n) {
@@ -190,6 +190,7 @@ h1 {
     left: 0% !important;
 }
 
+
 /*个性签名*/
 .tip_j {
     font-size: var(--main-font-size) !important;
@@ -221,6 +222,11 @@ h1 {
         right: calc(-200px - 10vw);     /* .clearit.columns若变宽，右边框位置会改变 */
         top: 10px;
         width: 30%;
+    }
+    
+    /*h1的宽度 = 整个文字区域宽度 - 返回、发新帖的宽度，只适用于1080p及以上分辨率*/
+    #pageHeader > h1 {
+        width: calc(850px + 10vw) !important;
     }
 }
 
@@ -283,9 +289,20 @@ h1 {
 
 @-moz-document regexp("http(s|)://bgm.tv/mono") {
 /*右边栏*/
-#columnChlCrtB {
-    position: relative;
-    left: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97 - 696px) * 0.5);
-    width: 280px;
+/*above 1366px*/
+@media screen and (min-width: 1367px) {
+    #columnChlCrtB {
+        position: relative;
+        left: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97 - 696px) * 0.5);
+        width: 280px;
+    }
+}
+/*below 1366px*/
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    #columnChlCrtB {
+        position: relative;
+        left: calc((97vw - var(--sidebar-width) - 696px) * 0.5);
+        width: 280px;
+    }
 }
 }
