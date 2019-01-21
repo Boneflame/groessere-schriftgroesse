@@ -53,19 +53,17 @@
 }
 
 @-moz-document regexp("https://twitter\\.com.*?\\?(?=lang).*"), regexp("https://twitter\\.com[^\\?]*") {
-@media screen and (max-width: 1279px) {
-    /*main page*/
-    
+@media screen and (max-width: 1279px) and (min-height: 1025px) {
+    /*main page*/    
     /*left sidebar*/
     .dashboard-left.dashboard {
-        position: absolute;
-        left: -70px;
+        position: fixed;
+        left: 10px;
     }
     
     /*right sidebar*/
     .dashboard-right.dashboard {
-        position: absolute;
-        left: 0px;
+        position: fixed;
         top: 750px;
     }
     
