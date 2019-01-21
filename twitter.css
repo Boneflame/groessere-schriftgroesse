@@ -53,7 +53,32 @@
 }
 
 @-moz-document regexp("https://twitter\\.com.*?\\?(?=lang).*"), regexp("https://twitter\\.com[^\\?]*") {
-@media screen and (max-width: 1439px) and (min-width: 1025px){
+@media screen and (max-width: 1279px) {
+    /*main page*/
+    
+    /*left sidebar*/
+    .dashboard-left.dashboard {
+        position: absolute;
+        left: -70px;
+    }
+    
+    /*right sidebar*/
+    .dashboard-right.dashboard {
+        position: absolute;
+        left: 0px;
+        top: 750px;
+    }
+    
+    #timeline.top-timeline-tweetbox.content-main,   /*timeline*/
+    #timeline.light-inline-actions.content-main {   /*Notification*/
+        position: absolute;
+        left: 230px;
+        width: calc(100vw - 320px);
+    }
+}
+
+
+@media screen and (max-width: 1439px) and (min-width: 1280px){
     /*main page*/
     /*timeline*/
     #timeline.top-timeline-tweetbox.content-main {
@@ -117,7 +142,7 @@
     #timeline.top-timeline-tweetbox.content-main {
         position: relative;
         left: calc((100vw - 1430px) * 0.2 + 275px + 608px - 50vw);
-        width: calc(60vw + 572px - 2.06 * var(--right-sidebar-width));
+        width: calc(60vw + 572px - 2.06*var(--right-sidebar-width));
     }
 
     /*Notification*/
@@ -125,7 +150,7 @@
     #timeline.list.content-main {                   /*timeline of list*/
         position: absolute;
         left: calc((100vw - 1430px) * 0.2 + var(--right-sidebar-width) + 610px - 50vw);
-        width: calc(60vw + 572px - 2.06 * var(--right-sidebar-width));
+        width: calc(60vw + 572px - 2.06*var(--right-sidebar-width));
     }
 
     /*Profile*/
