@@ -73,6 +73,27 @@
         left: 230px;
         width: calc(100vw - 320px);
     }
+    
+    /*Profile*/
+    /*left sidebar*/
+    #page-container > div.AppContainer > div > div > div.Grid-cell.u-size1of3.u-lg-size1of4 > div > div > div  {
+        position: sticky !important;
+        width: 300px;
+    }
+    .SidebarCommonModules {
+        position: sticky !important;
+        width: 300px;
+    }
+    /*timeline and provide user*/
+    .u-lg-size2of3 {
+        position: relative;
+        left: 7px;
+        width: calc(100vw - 310px);
+    }
+    /*make left dashboard and timeline align to left*/
+    #page-container > div.AppContainer > div {
+        left: -90px;
+    }
 }
 
 
