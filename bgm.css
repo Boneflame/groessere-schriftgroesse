@@ -78,10 +78,13 @@ div#chl_subitem > ul > li > span {
     left: calc(50vw + 20px);
     width: 300px;
 }
+
+
 /*相关人物*/
 dl.side_port {
     width: 90px !important;
 }
+
 
 /*above 1366px*/
 @media screen and (min-width: 1367px) {
@@ -304,5 +307,32 @@ h1 {
         left: calc((97vw - var(--sidebar-width) - 696px) * 0.5);
         width: 280px;
     }
+}
+}
+
+@-moz-document regexp("https://bgm\\.tv/user/.*") {
+/*主体*/
+#columnA {
+    width: calc((100vw * var(--ratio) - var(--sidebar-width)) * 0.97);
+    position: relative;
+    left: calc(500px - 50vw * var(--ratio))
+}
+
+/*sns*/
+#user_home > div.user_box.clearit > ul > li:nth-child(n) {
+    width: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97) / 3.5);
+}
+
+#anime > div:nth-child(n) > ul > li:nth-child(n) {
+    width: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97) / 10);;
+}
+#game > div:nth-child(n) > ul > li:nth-child(n) {
+    width: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97) / 10);;
+}
+#book > div:nth-child(n) > ul > li:nth-child(n) {
+    width: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97) / 10);;
+}
+#music > div:nth-child(n) > ul > li:nth-child(n) {
+    width: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97) / 10);;
 }
 }
