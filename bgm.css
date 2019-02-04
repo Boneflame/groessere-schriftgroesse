@@ -35,14 +35,6 @@ div.clearit.item:nth-of-type(n), .entry {
 }
 
 
-/*顶栏导航*/
-@media screen and (min-width: 1367px) {
-    .clearit.headerNeueInner {
-        width: var(--main-width) !important
-    }
-}
-
-
 /*首页每部作品块的宽度，多列显示*/
 #cloumnSubjectInfo .tinyMode {
     width: 390px;
@@ -63,25 +55,6 @@ div.clearit.item:nth-of-type(n), .entry {
 }
 div#chl_subitem > ul > li > span {
     float: none;
-}
-
-
-/*搜索页面*/
-#columnSearchA {
-    position: relative;
-    left: calc(1000px - 60vw);
-    width: 120px;
-}
-#columnSearchB {
-    position: relative;
-    top: -420px;
-    width: 50vw;
-}
-#columnSearchC {
-    position: relative;
-    top: -1800px;
-    left: calc(50vw + 20px);
-    width: 300px;
 }
 
 
@@ -112,6 +85,29 @@ dl.side_port {
     }
     .groupsSmall > li:nth-of-type(n) {
         width: 100%
+    }
+    
+    /*顶栏导航*/
+    .clearit.headerNeueInner {
+        width: var(--main-width) !important
+    }
+    
+    /*搜索页面*/
+    #columnSearchA {
+        position: relative;
+        left: calc(1000px - 60vw);
+        width: 120px;
+    }
+    #columnSearchB {
+        position: relative;
+        top: -420px;
+        width: 50vw;
+    }
+    #columnSearchC {
+        position: relative;
+        top: -1800px;
+        left: calc(50vw + 20px);
+        width: 300px;
     }
 }
 
