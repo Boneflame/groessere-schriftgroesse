@@ -29,12 +29,17 @@ div.clearit.item:nth-of-type(n), .entry {
 }
 
 
-/*顶栏导航、底部“关于”*/
+/*底部“关于”*/
 #navMenuNeue.clearit, #footerLinks.clearit {
     width: 110%
 }
-.clearit.headerNeueInner {
-    width: var(--main-width) !important
+
+
+/*顶栏导航*/
+@media screen and (min-width: 1367px) {
+    .clearit.headerNeueInner {
+        width: var(--main-width) !important
+    }
 }
 
 
