@@ -4,7 +4,7 @@ p, p > span:nth-child(n),
     font-size: 20px !important;
 }
 
-@-moz-document regexp("https://www\\.amazon\\.de/dp/.+") {
+@-moz-document regexp("https://www\\.amazon\\.de/.*?(d|g)p/.+") {
 /*amazon prime video subtitle*/
 p > span:nth-child(n) {
     font-size: 3rem !important;
@@ -22,12 +22,70 @@ li:nth-child(n) > p:nth-child(n) > span {                                       
 }
 
 
+/*去掉原list背景的黑块*/
+#g_playlist > div.listbd > div.msk {
+    display: none;
+}
+
+
 /*修复播放列表中时间的显示*/
 ul > li:nth-child(n) > div.col.col-5 {
     width: 60px;
 }
 ul > li:nth-child(n) > div.col.col-6 {
     width: 10px;
+}
+
+
+/*加宽*/
+@media screen and (min-width: 1280px) {
+    /*歌曲列表*/
+    #m-playlist {                    
+        position: relative;
+        width: 85vw;
+    }
+    
+    /*“我的音乐”页面*/
+    #g_mymusic > div {
+        min-width: 85vw;
+    }
+    
+    /*左边栏*/
+    #g_mymusic > div > div.g-sd3.u-scroll.n-musicsd.f-pr.j-flag,
+    div > p.name.f-thide {
+        width: 450px;
+    }
+    div > p.s-fc4.f-thide.num {
+        line-height: 1rem;
+    }
+    .f-cb.item {
+        height: 60px;
+    }
+    
+    /*歌曲列表*/
+    #g_mymusic > div > div.g-mn3.f-pr.j-flag {
+        width: calc(85vw - 450px)
+    }
+    
+    /*搜索框、创意者中心按钮*/
+    #g_search > div.srchbg {
+        width: 190px;
+    }
+    #g-topbar > div.m-top > div > a {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 1279px) {
+    /*歌曲列表*/
+    #m-playlist {
+        position: relative;
+        width: 100vw;
+    }
+    
+    /*“我的音乐”页面*/
+    #g_mymusic > div {
+        min-width: 100vw;
+    }
 }
 }
 
