@@ -311,7 +311,7 @@ h1 {
 }
 }
 
-@-moz-document regexp("https://bgm\\.tv/user/.*") {
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/user/.*") {
 /*主体*/
 #columnA {
     width: calc((100vw * var(--ratio) - var(--sidebar-width)) * 0.97);
@@ -335,5 +335,13 @@ h1 {
 }
 #music > div:nth-child(n) > ul > li:nth-child(n) {
     width: calc(((100vw * var(--ratio) - var(--sidebar-width)) * 0.97) / 10);;
+}
+}
+
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/person/.*") {
+#columnCrtB > div.section {
+    position: relative;
+    left: 0px;
+    width: 100% !important;
 }
 }
