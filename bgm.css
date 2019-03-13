@@ -91,24 +91,6 @@ dl.side_port {
     .clearit.headerNeueInner {
         width: var(--main-width) !important
     }
-    
-    /*搜索页面*/
-    #columnSearchA {
-        position: relative;
-        left: calc(1000px - 60vw);
-        width: 120px;
-    }
-    #columnSearchB {
-        position: relative;
-        top: -420px;
-        width: 50vw;
-    }
-    #columnSearchC {
-        position: relative;
-        top: -1800px;
-        left: calc(50vw + 20px);
-        width: 300px;
-    }
 }
 
 /*below 1366*/
@@ -343,5 +325,30 @@ h1 {
     position: relative;
     left: 0px;
     width: 100% !important;
+}
+}
+
+@-moz-document regexp("http(s|)://(bgm|bangumi)\\.tv/subject_search/.*") {
+/*above 1366px*/
+@media screen and (min-width: 1367px) {
+    h1 {
+        width: 100px !important;
+    }
+    #main > div.columns.clearit {
+        position: relative;
+        width: calc(55vw + 420px);
+        left: calc(290px - 25vw);
+    }
+
+    #columnSearchA {    /*left*/
+        width: 10vw;
+    }
+    #columnSearchB {    /*middle*/
+        width: 50vw;
+    }
+    #columnSearchC {    /*right*/
+        position: relative;
+        width: 300px;
+    }
 }
 }
