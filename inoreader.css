@@ -42,3 +42,10 @@
     bottom: -800px !important;
 }
 }
+
+@-moz-document regexp("https://www\\.inoreader\\.com/starred") {
+/*right side*/
+#reader_pane {
+    right: 0px !important;
+}
+}
