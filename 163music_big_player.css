@@ -1,0 +1,122 @@
+@-moz-document domain("music.163.com") {
+/*Based on https://userstyles.org/styles/140079/theme*/
+
+.m-playbar .list {
+    position: absolute;
+    /*left: 50%;*/
+    bottom: 47px;
+    _bottom: 46px;
+    width: 986px;
+    _width: 982px;
+    margin-left: -493px;
+    _marign-left: -491px;
+    height: 80vh;
+}
+
+/* mp3 list title*/
+.m-playbar .listhd {
+    background-position: 0 0;
+    height: 41px;
+    margin-top: -41px;
+}
+
+
+/*mp3 list cont*/
+.m-playbar .listbd {
+    position: absolute;
+    left: 0;
+    top: 41px;
+    width: 976px;
+    _width: 972px;
+    overflow: hidden;
+    background-position: -1014px 0;
+    _background-position: -1018px 0;
+    background-repeat: repeat-y;
+    height: 100%;
+    margin-top: -41px;
+}
+.m-playbar .listbdc {
+    position: absolute;
+    left: 2px;
+    _left: 0;
+    top: 0;
+    z-index: 4;
+    height: 260px;
+    width: 553px;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/*select bar */
+.m-playbar .listbd .bline {
+    position: absolute;
+    left: 555px;
+    _left: 553px;
+    top: -1px;
+    z-index: 2;
+    width: 6px;
+    height: 260px;
+    background: #000;
+    opacity: .5;
+    filter: Alpha(opacity=50);
+    height: 100%;
+}
+
+
+/*lrc*/
+.m-playbar .listlyric {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    z-index: 4;
+    margin: 21px 0 20px 0;
+    height: 219px;
+    width: 354px;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/*wider playlist*/
+.list {
+    left: 600px !important;
+    background-color: #333 !important;
+}
+.list, .listhd, .listhdc, .listbd, .listbdc, .j-flag.imgbg {
+    width: calc(85vw) !important;
+}
+
+:root {
+    --song_name_width: 30vw;
+    --artist_name_width: 250px;
+    --diff: 230px;
+}
+/*song name in playlist*/
+.col.col-2 {
+    width: var(--song_name_width) !important;
+}
+col.col-3 {
+    width: 10px !important;
+}
+/*artist*/
+.col.col-4 {
+    width: var(--artist_name_width) !important;
+}
+/*jhplaylist rollbar*/
+.j-flag.bline {
+    left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff)) !important
+}
+.msk2 {
+    width: 10px !important;
+}
+/*lrc display*/
+.j-flag.listlyric {
+    left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff));
+    width: calc(85vw - var(--song_name_width) - var(--artist_name_width) - var(--diff));
+}
+/*song name above lrc*/
+.j-flag.f-thide.f-ff0.lytit {
+    left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff) + 80px);
+}
+}
