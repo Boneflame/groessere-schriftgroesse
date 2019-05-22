@@ -2,6 +2,54 @@
 :root {
     --sticker-popup-height: 750px;
     --sticker-popup-width: 550px;
+    --group-list-width: 30%;
+    --group-list-width-small: 420px;
+}
+
+
+/*whole area*/
+.tg_head_split, .im_page_wrap, .im_message_wrap, .im_send_panel_wrap, .im_send_form, .tg_head_peer_title {
+    max-width: 85rem !important;
+}
+
+
+/*wider than 1280px*/
+@media screen and (min-width: 1280px) {
+    /*group list*/
+    .im_dialogs_col_wrap, .tg_head_logo_wrap {
+        width: var(--group-list-width) !important;
+    }
+    /*chat area*/
+    .im_history_col_wrap, .tg_head_main_wrap {
+        width: calc(100% - var(--group-list-width)) !important;
+    }
+}
+
+/*below than 1280px*/
+@media screen and (max-width: 1279px) {
+    .im_dialogs_col_wrap, .tg_head_logo_wrap {
+        width: var(--group-list-width-small) !important;
+    }
+    /*chat area*/
+    .im_history_col_wrap, .tg_head_main_wrap {
+        width: calc(100% - var(--group-list-width-small)) !important;
+    }
+}
+
+
+/*group profile img*/
+.im_dialog_photo {
+    border-radius: 50% !important;
+    height: 3rem !important;
+    width: 3rem !important;
+}
+
+
+
+/*send button*/
+.im_submit {
+    height: unset !important;
+    line-height: unset !important;
 }
 
 
@@ -106,9 +154,20 @@
 /*Bewegungsteil*/
 .non_msie .composer_emoji_tooltip_tabs_stickers_active .composer_emoji_tooltip_tabs_contents{-webkit-transform:translate3d(-560px,0,0);-moz-transform:translate3d(-560px,0,0);-o-transform:translate3d(-560px,0,0);-ms-transform:translate3d(-560px,0,0);transform:translate3d(-560px,0,0)}
 
-/*size of sticker img*/
-/*.composer_sticker_image {
-    width: 100px !important;
-    height: 100px !important;
-}*/
+
+/*larger img & sticker*/
+a.im_message_photo_thumb, img.im_message_photo_thumb,
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div,
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > img  {
+    width: 370px !important;
+    height: 100% !important;
+}
+
+
+/*remove bottom empty*/
+body > div.page_wrap > div.footer_wrap.footer_empty {
+    height: 0 !important;
+}
 }
