@@ -156,12 +156,43 @@
 
 
 /*larger img & sticker*/
+/*img*/
 a.im_message_photo_thumb, img.im_message_photo_thumb,
 
+/*in group*/
+/*sticker*/
 body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div,
 
-body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > img  {
-    width: 370px !important;
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > img,
+
+/*gif*/
+/*thumb*/
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div:nth-child(n) > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div,
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div:nth-child(n) > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div > img, 
+
+/*during playing*/
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div:nth-child(n) > div:nth-child(n) > div.im_message_outer_wrap.hasselect > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div > div:nth-child(n) > video,
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages.im_history_messages_group > div:nth-child(n) > div:nth-child(n) > div.im_message_outer_wrap.hasselect > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div > div:nth-child(n) > video > source,
+
+/*in privat chat*/
+/*sticker */
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages > div:nth-child(n) > div:nth-child(n) > div.im_message_outer_wrap.hasselect > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div, 
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages > div:nth-child(n) > div:nth-child(n) > div.im_message_outer_wrap.hasselect > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > img,
+
+/*gif*/
+/*thumb*/
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div,
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages > div.im_history_messages_peer > div:nth-child(n) > div > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div > img,
+
+/*during playing*/
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages > div.im_history_messages_peer > div:nth-child(n) > div.im_message_outer_wrap.hasselect > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div > div:nth-child(n) > video,
+
+body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap.noselect.im_history_loaded > div.im_history_selected_wrap > div > div.im_history_wrap.nano.active-scrollbar > div.im_history_scrollable_wrap.nano-content > div > div.im_history.im_history_selectable > div.im_history_messages > div.im_history_messages_peer > div:nth-child(n) > div.im_message_outer_wrap.hasselect > div > div > div.im_message_body.im_message_body_media > div > div.im_message_media > div > div > div > div > a > div > div:nth-child(n) > video {
+    width: 440px !important;
     height: 100% !important;
 }
 
