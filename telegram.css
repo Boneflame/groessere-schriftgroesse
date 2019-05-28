@@ -1,4 +1,3 @@
-@-moz-document domain("web.telegram.org") {
 :root {
     --sticker-popup-height: 750px;
     --sticker-popup-width: 550px;
@@ -25,8 +24,9 @@
         width: calc(100% - var(--group-list-width) * 100%) !important;
     }
     /*link ipreview in chat*/
-    .im_message_webpage_article, .im_message_webpage_title, .im_message_webpage_description {
-        width: calc((1 - var(--group-list-width)) * 85rem - 195px);
+    .im_message_webpage_article, .im_message_webpage_title, .im_message_webpage_title > a, .im_message_webpage_description {
+        width: calc((1 - var(--group-list-width)) * var(--main-width) - 250px);
+        margin-right: 0px !important;
     }
 }
 
@@ -205,5 +205,4 @@ body > div.page_wrap > div.im_page_wrap.clearfix > div > div.im_history_col_wrap
 /*remove bottom empty*/
 body > div.page_wrap > div.footer_wrap.footer_empty {
     height: 0 !important;
-}
 }
