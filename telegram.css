@@ -156,12 +156,23 @@
 .non_msie .composer_emoji_tooltip_tabs_stickers_active .composer_emoji_tooltip_tabs_contents{-webkit-transform:translate3d(-560px,0,0);-moz-transform:translate3d(-560px,0,0);-o-transform:translate3d(-560px,0,0);-ms-transform:translate3d(-560px,0,0);transform:translate3d(-560px,0,0)}
 
 
-/*larger img & sticker*/
+/*larger img & sticker in chat*/
 a.im_message_photo_thumb, img.im_message_photo_thumb,   /*img*/
 .clickable, .clickable > img,                           /*sticker*/
 .img_gif_image_wrap, .img_gif_thumb, .img_gif_video {   /*gif*/
     width: 380px !important;
     height: 100% !important;
+}
+
+
+/*larger sticker in sticker list*/
+a.composer_sticker_btn {
+    width: 123px;
+    height: 123px;
+}
+a.composer_sticker_btn > img {
+    max-width: 120px;
+    max-height: 120px;
 }
 
 
