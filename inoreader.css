@@ -21,8 +21,7 @@
 /*hide ads rather than block them*/
 /*right side*/
 #sinner_container {
-    position: absolute !important;
-    right: -500px !important;
+    z-index: 0
 }
 
 /*read area right align*/
