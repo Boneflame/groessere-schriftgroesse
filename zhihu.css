@@ -10,11 +10,11 @@
 @-moz-document domain("www.zhihu.com") {
 /*主栏字体*/
 .ztext.RichText {
-    font-size: calc(var(--main-font-size) * 1.1);
+    font-size: calc(var(--main-font-size) * 1.1) !important;
 }
 /*评论区字体*/
 .CommentRichText, .CommentItemV2-meta {
-    font-size: var(--main-font-size)
+    font-size: var(--main-font-size) !important;
 }
 
 /*Profile右边栏
@@ -96,7 +96,7 @@
 
 .ContentItem-actions {
     height: 30px !important;
-    left: 130px;
+    width: 150px;
 }
 
 /*above 1366px*/
@@ -115,7 +115,7 @@
 
     /*文字列表摘要，文章正文，评论中的回复*/
     .RichContent-inner, p:nth-of-type(n), .ztext.RichText {
-        font-size: calc(var(--main-font-size) * 1.15)
+        font-size: calc(var(--main-font-size) * 1.15) !important;
     }
 
     /*正文区域加宽*/
@@ -135,7 +135,7 @@
 
     /*文章标题*/
     .ArticleItem-Title, .Post-Title {
-        font-size: calc(var(--main-font-size) * 1.5) !important
+        font-size: calc(var(--main-font-size) * 1.5) !important;
     }
 }
 
@@ -155,7 +155,7 @@
     
     /*文字列表摘要，文章正文，评论中的回复*/
     .RichContent-inner, p:nth-of-type(n), .ztext.RichText {
-        font-size: calc(var(--main-font-size) * 1.15)
+        font-size: calc(var(--main-font-size) * 1.15) !important;
     }
 
     /*正文区域加宽*/
@@ -165,7 +165,7 @@
 
     /*分享按钮*/
     .Post-SideActions {
-        left: 94.5%;
+        left: 92.7%;
         top: 81%
     }
 
@@ -176,7 +176,7 @@
 
     /*文章标题*/
     .ArticleItem-Title, .Post-Title {
-        font-size: calc(var(--main-font-size) * 1.5) !important
+        font-size: calc(var(--main-font-size) * 1.5) !important;
     }
 }
 }
