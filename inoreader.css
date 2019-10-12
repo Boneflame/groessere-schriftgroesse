@@ -10,11 +10,29 @@
 
 #article_dialog, .article_content,
 .user_comments_commenter, .comments_wrap {
-    max-width: var(--width) !important;
+     max-width: var(--width) !important;
+     height: 90vh !important;
+}
+
+.article_content{
+     padding-top: 5vh !important;
+     padding-bottom: 50px !important;
 }
 
 .comments_title, .comments_body, .comments_wrap {
     width: calc(0.938*var(--width))
+}
+
+/*bottom ad*/
+#article_below_dialog_wrapper {
+     top: 100vh !important;    
+     max-height: 0px !important;
+}
+
+.article_footer {
+     position: absolute !important;
+     top: 11vh !important;
+     padding-bottom: 10px !important;
 }
 
 
@@ -25,8 +43,10 @@
 }
 
 /*read area right align*/
-#reader_pane {
-    right: -200px !important;
+@media screen and (min-width: 1367px) {
+    #reader_pane {
+        right: -200px !important;
+    }
 }
 
 /*top*/
