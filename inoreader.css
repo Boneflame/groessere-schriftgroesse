@@ -77,12 +77,13 @@
 .article-title {
      font-size: 1.25em !important;
      line-height: 1.2 !important;
+     max-height: 50% !important;
 }
 
 .preview {
      font-size: 1.05em !important;
      line-height: 1.1em !important;
-     min-height: 72px !important;
+     max-height: 100% !important;
 }
 
 /*button in card*/
@@ -93,7 +94,16 @@
 .text-under-picture {
      padding:10px !important;
      padding-bottom: 0px !important;
-     max-height: 340px !important;
+}
+
+.article-buttons {
+     padding-top: 0px !important;
+     /*background-color: #2d2e32 !important;*/    /*gelesen*/
+     background-color: #37383d !important;
+     margin: 3% !important;
+     width: 95% !important;
+     margin-bottom: -5% !important;
+     height: 15%
 }
 
 /*expend card area and hide ads*/
@@ -116,6 +126,6 @@
 .w-100.sticky-top.modal-invisible-aside.article-view,
 .font_size_titles.font-size-6.w-100.article-view,
 .font_size_titles.font-size-6.article-view {
-     max-width: 70vw
+     max-width: calc(var(--width) - 10vw);
 }
 }
