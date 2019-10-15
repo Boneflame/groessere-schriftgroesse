@@ -1,6 +1,6 @@
 @-moz-document domain("inoreader.com") {
 :root {
-    --width: 85vw;
+    --width: 80vw;
 }
 
 #article_dialog_wrapper {
@@ -70,5 +70,52 @@
 /*right side*/
 #reader_pane {
     right: 0px !important;
+}
+}
+
+@-moz-document domain("inoreader.com") {
+.article-title {
+     font-size: 1.25em !important;
+     line-height: 1.2 !important;
+}
+
+.preview {
+     font-size: 1.05em !important;
+     line-height: 1.1em !important;
+     min-height: 72px !important;
+}
+
+/*button in card*/
+.row.justify-content-start.pt-1.pb-2.align-items-center {
+     padding-bottom: 0px !important;
+}
+
+.text-under-picture {
+     padding:10px !important;
+     padding-bottom: 0px !important;
+     max-height: 340px !important;
+}
+
+/*expend card area and hide ads*/
+.article-container.with-banner {
+     padding: 0px !important;
+}
+
+.article-list {
+     max-width: 83vw !important;
+     margin-right: 0px !important;
+     margin-left: 0px !important;
+}
+
+/*expand card*/
+.modal-xl.modal-order-1.modal-stack-0.modal-dialog {
+     max-width: var(--width);
+}
+
+/*expand content area in card*/
+.w-100.sticky-top.modal-invisible-aside.article-view,
+.font_size_titles.font-size-6.w-100.article-view,
+.font_size_titles.font-size-6.article-view {
+     max-width: 70vw
 }
 }
