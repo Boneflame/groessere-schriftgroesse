@@ -1,0 +1,17 @@
+@-moz-document domain("v2ex.com") {
+:root {
+    --main-font-size: 20px;
+}
+
+.content {
+     margin: 0px;
+     max-width: 100vw !important;
+}
+
+.gray,
+.topic_content, #Main > div:nth-child(n) > div.topic_buttons > a:nth-child(n), .topic_stats.fr, #topic_thank > a,
+.cell,
+.dark, .ago, .reply_content {
+     font-size: var(--main-font-size);
+}
+}
