@@ -1,0 +1,24 @@
+@-moz-document domain("www.gamersky.com") {
+:root {
+    --width: 80vw;
+}
+
+.Mcenter {
+     margin: calc(50vw - 0.5*var(--width));
+}
+
+/*主题*/
+.Mid, .Mid0, .game-hot, .Mid1, .Mid2 {
+     width: var(--width) !important;
+}
+
+/*正文*/
+.Mid2, .Mid2_L, .block.Mid2L_ctt, .Mid2L_tit, .Mid2L_con {
+     width: calc(var(--width) - 350px);
+}
+
+/*pic*/
+.picact {
+     width: calc(var(--width) * 0.6);
+}
+}
