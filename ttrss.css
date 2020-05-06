@@ -7,15 +7,22 @@ body {
     font-size: calc(var(--main-font-size) * 0.9)!important;
 }
 
+
+/*font color of notification for night theme*/
+#notify > span {
+     color: #000000 !important;
+}
+
 /*custom css dialog*/
 #cssEditDlg {
-     height: 900px !important;
+     width: 70vw !important;
+     height: 89vh !important;
 }
 
 body.ttrss_prefs .user-css-editor {
-     height: 680px !important;
-     width: 965px !important;
-     font-size: 16px !important
+     height: 73vh !important;
+     width: 69vw !important;
+     font-size: 16px !important;
 }
 
 /*log*/
@@ -24,8 +31,9 @@ td.errstr, td.errno, td.filename, td.login, td.timestamp {
      font-size: var(--main-font-size) !important;
 }
 
+
 /*limit the height of img*/
-#content-insert > div > div.content > p:nth-child(n) > a > img {
+img {
     max-height: 720px !important;
 }
 
@@ -35,10 +43,21 @@ div.dijitTreeRow.Unread > span.dijitInline.dijitTreeExpando.dijitTreeExpandoLeaf
      margin: 0px !important;
 }
 
+/*计数器和右边框的距离*/
+.dijitTreeRow {
+     padding: 5px !important;
+}
+
 /*content font size*/
 div.postContent, .content {
     font-size: calc(var(--main-font-size) * 1.1) !important;
     line-height: 1.5em !important;
+}
+
+/*content margin*/
+p:nth-child(n) {
+     margin: 0px !important;
+     max-width: 100% !important;
 }
 
 /*title font size*/
