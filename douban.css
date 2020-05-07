@@ -1,0 +1,61 @@
+:root {
+    --main-font-size: 20px;
+}
+
+@-moz-document regexp("https://.*\\.douban\\.com.*") {
+#link-report > span > div {
+     font-size: var(--main-font-size) !important;
+}
+
+#wrapper {
+     width:80vw !important;
+}
+
+#content > div > div.article {
+     width: calc(80vw - 350px) !important;
+}
+
+
+/*info与评分*/
+/*评分框*/
+#interest_sectl > div.rating_wrap.clearbox {
+     width: 10vw;
+}
+
+/*影片信息*/
+.subject.clearfix {
+     width: calc(80vw - 350px - 180px) !important;
+}
+
+/*影片信息字体*/
+#info {
+     max-width: calc(80vw - 350px - 180px - 155px) !important;
+     font-size: calc(var(--main-font-size) * 0.9);
+}
+
+/*评分框字体*/
+.rating_logo.ll, .rating_sum > a, #interest_sectl,
+.stars5.starstop, .stars4.starstop, .stars3.starstop, .stars2.starstop, .stars1.starstop,
+#interest_sectl > div.rating_wrap.clearbox > div.ratings-on-weight > div:nth-child(n) > span.rating_per {
+     font-size: calc(var(--main-font-size) * 0.9);
+}
+
+/*简介*/
+.related-info, h2 > i {
+     font-size: var(--main-font-size);
+}
+
+/*演职员*/
+#celebrities > ul > li:nth-child(n) > div {
+     font-size: var(--main-font-size);
+}
+
+#celebrities > ul > li:nth-child(n),
+div > span.role, .name,
+#celebrities > ul > li:nth-child(n) > div > span.name > a {
+     width: 15vw !important;
+     margin: 0px !important;
+}
+
+
+}
