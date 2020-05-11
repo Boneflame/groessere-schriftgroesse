@@ -1,14 +1,23 @@
-p, p > span:nth-child(n),
-.comment-html, .quote-comments-con,      /*cnbeta comment*/
-.article-content {                       /*cnbeta text*/
-    font-size: 20px !important;
+:root {
+    --main-font-size: 20px;
 }
 
-@-moz-document regexp("https://www\\.amazon\\.de/.*?(d|g)p/.+") {
+p, p > span:nth-child(n),
+.comment-html, .quote-comments-con,      /*cnbeta comment*/
+.article-content,                        /*cnbeta text*/
+.comment-text {                          /*moegirl comment*/
+    font-size: var(--main-font-size) !important;
+    line-height: 1.5 !important;
+}
+
+@-moz-document regexp("https://www\\.amazon\\.de/(d|g)p/video.+") {
 /*amazon prime video subtitle*/
-p > span:nth-child(n) {
+p > span:nth-child(n),
+#dv-web-player > div > div:nth-child(n) > div > div > div:nth-child(n) > div > div > div.scalingUiContainerBottom > div > div.controlsOverlay > div.controlsOverlayTop > div.persistentPanel > div > div > div > p, 
+#dv-web-player > div > div:nth-child(n) > div > div > div:nth-child(n) > div > div > div.scalingUiContainerBottom > div > div.controlsOverlay > div.controlsOverlayTop > div.persistentPanel > div > div > div > p > span, 
+#dv-web-player > div > div:nth-child(n) > div > div > div:nth-child(n) > div > div > div.scalingUiContainerBottom > div > div.controlsOverlay > div.controlsOverlayTop > div.persistentPanel > div > div > div > p > span > span {
     font-size: 3rem !important;
-    font-family: IBM Plex Sans Light;
+    font-family: IBM Plex Sans Regular !important;
 }
 }
 
@@ -74,6 +83,25 @@ ul > li:nth-child(n) > div.col.col-6 {
     #g-topbar > div.m-top > div > a {
         width: 100px;
     }
+    
+    /*专辑播放液面*/
+    /*song list*/
+    .f-cb.g-bd4 {
+        position: relative;
+        width: 100vw;
+        /*left: calc(980px * 0.5 - 50vw);*/
+    }
+    /*tight sidebar*/
+    .g-sd4 {
+        position: fixed;
+        right: 10px;
+        float: right !important;
+    }
+    /*歌词*/
+    .g-bd4.f-cb > div.g-mn4 > div > div > div.m-lycifo > div.f-cb > div.cnt {
+        position: relative;
+        left: calc(980px * 0.5 - 50vw);
+    }
 }
 @media screen and (max-width: 1279px) {
     /*歌曲列表*/
@@ -87,22 +115,123 @@ ul > li:nth-child(n) > div.col.col-6 {
         min-width: 100vw;
     }
 }
+
+
+/*收藏popup*/
+.m-layer.z-show.m-layer-w2 > div.zcnt > div {
+    height: 75vh;
+}
 }
 
-@-moz-document domain("plus.google.com") {
-.jVjeQd,                                 /*text*/
-.sXku1c, .NCFA5c.eYSPjc, .sRhiGb.eYSPjc, /*id & share circle*/
-.vGowKb, .g6UaYd,                        /*id, text in comment, expanded*/
-.X865Z,                                  /*id, text in comment, not expanded*/
-.D6Uvj {                                 /*reshare*/
+@-moz-document domain("cuckoo.social") {
+p, .main-status-content.status-content.mu-card-text, .secondary-read-text-color, .full-reply-status-content.status-content.mu-card-text, .primary-read-text-color.spoiler-text-area, 
+.reblog-source-link, .reblog-status-content.status-content.mu-card-text {   /*转发来源和原po*/
+    font-size: var(--main-font-size) !important;
+}
+
+/*缩小链接预览显示区域*/
+#app > div.app-content.container-fluid > div > div:nth-child(n) > div.status-cards-container > div:nth-child(n) > div > div.main-link-preview-area > div > div > div {
+     max-width: 300px;
+}
+}
+
+@-moz-document regexp("https://devtalk.nvidia.com.*") {
+.forumText {
+    font-size: 1.1rem !important;
+}
+}
+
+@-moz-document regexp("https://www\\.google\\..*") {
+.B6fmyf {
+    width: 700px;
+}
+}
+
+@-moz-document regexp("https://www.acfun.cn/.*") {
+.comment-content  {
     font-size: 1rem !important;
 }
 
-.NCFA5c.eYSPjc {
-    line-height: 1.25rem;
+span.comment-floor, a.name, span.post-time, span.from-phone {
+    font-size: 0.8rem !important;
+}
 }
 
-.jVjeQd, .Wj5EM, .g6UaYd {        /*text, comment*/
-    line-height: 1.3rem;
+@-moz-document domain("thwiki.cc") {
+#mw-content-text > div > div.mw-parser-output > table:nth-child(n) > tbody > tr > td:nth-child(n) > table:nth-child(n) > tbody > tr:nth-child(n) > td,
+#mw-content-text > div > div.mw-parser-output > ul,
+.poem,
+.comment-text,
+#mw-content-text > div > div > table:nth-child(n) > tbody > tr:nth-child(n) > td,
+#mw-content-text > div > div > dl:nth-child(n) {
+     font-size: var(--main-font-size) !important;
 }
+}
+
+@-moz-document regexp(".*?\\.pornhub.*") {
+.commentMessage {
+     font-size: var(--main-font-size) !important;
+}
+}
+
+@-moz-document regexp("https://.*\\.douban\\.com.*") {
+#link-report > span > div {
+     font-size: var(--main-font-size) !important;
+}
+
+#wrapper {
+     width:80vw !important;
+}
+
+#content > div > div.article {
+     width: calc(80vw - 350px) !important;
+}
+
+
+/*info与评分*/
+/*评分框*/
+#interest_sectl > div.rating_wrap.clearbox {
+     width: 10vw;
+}
+
+/*影片信息*/
+.subject.clearfix {
+     width: calc(80vw - 350px - 180px) !important;
+}
+
+/*影片信息字体*/
+#info {
+     max-width: calc(80vw - 350px - 180px - 155px) !important;
+     font-size: calc(var(--main-font-size) * 0.9);
+}
+
+/*评分框字体*/
+.rating_logo.ll, .rating_sum > a, #interest_sectl,
+.stars5.starstop, .stars4.starstop, .stars3.starstop, .stars2.starstop, .stars1.starstop,
+#interest_sectl > div.rating_wrap.clearbox > div.ratings-on-weight > div:nth-child(n) > span.rating_per {
+     font-size: calc(var(--main-font-size) * 0.9);
+}
+
+/*简介*/
+.related-info, h2 > i {
+     font-size: var(--main-font-size);
+}
+
+/*演职员*/
+#celebrities > ul > li:nth-child(n) > div {
+     font-size: var(--main-font-size);
+}
+
+#celebrities > ul > li:nth-child(n),
+div > span.role, .name,
+#celebrities > ul > li:nth-child(n) > div > span.name > a {
+     width: 15vw !important;
+     margin: 0px !important;
+}
+
+
+}
+
+@-moz-document regexp("https://ttrss\\.vavhc\\.top.*") {
+
 }
