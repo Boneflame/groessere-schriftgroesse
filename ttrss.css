@@ -95,3 +95,11 @@ div.title > span > a > span { /*preview*/
      padding-right:0px !important;
      max-width: 1000px;
 }
+
+/*iframe*/
+iframe {
+     max-width: 100% !important;
+     max-height: 60vh !important;
+     height: 100%;
+     width: 100%;
+}
