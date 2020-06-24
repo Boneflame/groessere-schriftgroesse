@@ -1,0 +1,86 @@
+@-moz-document regexp("https://steamcommunity.com/app/\\d+?/discussions/.+") {
+:root {
+    --width: 96vw;
+    --margin: 1.5vw;
+    --font-size: 1.5em;
+}
+
+
+/*top navi bar*/
+#global_header > div {
+     margin-left: var(--margin) !important;
+     margin-right: var(--margin) !important;
+     width: var(--width) !important;
+}
+
+
+/*navi bar*/
+body > div.responsive_page_frame.with_header > div.responsive_page_content > div.responsive_page_template_content > div.pagecontent > div > div.apphub_HomeHeader {
+     margin-left: var(--margin);
+     max-width: var(--width) !important;
+}
+body > div.responsive_page_frame.with_header > div.responsive_page_content > div.responsive_page_template_content > div.pagecontent > div > div.apphub_HomeHeader > div.apphub_HomeHeaderContent {
+     margin-left: 0px;
+     max-width: var(--width) !important;
+}
+
+
+/*content area*/
+/*topic*/
+.forum_op {
+     max-width: var(--width) !important;
+}
+#AppHubContent {
+     margin-left: var(--margin);
+}
+#AppHubContent > div {
+     margin-left: 0px;
+}
+.leftcol {
+     width: calc(var(--width) - 350px) !important;
+}
+/*right sidebar*/
+#AppHubContent > div > div.rightcol.responsive_local_menu {
+     position: absolute;
+     right: var(--margin);
+}
+/*content*/
+#AppHubContent {
+     margin-left: var(--margin);
+     margin-right: var(--margin);
+     max-width: var(--width) !important;
+}
+.content, .commentthread_comment_text {
+     font-size: var(--font-size)!important;
+     line-height: var(--font-size) !important;
+}
+/*font for author etc.*/
+.commentthread_comment_author, .commentthread_author_link.hoverunderline, .commentthread_comment_timestamp, .forum_comment_permlink {
+     font-size: calc(var(--font-size) * 0.8) !important;
+}
+
+
+/*store, community, etc*/
+.supernav.menuitem, .menuitem {
+     font-size: calc(var(--font-size) * 0.7) !important;
+}
+/*all, discussion, screenshot, etc.*/
+.responsive_hidden.apphub_sectionTabs {
+     font-size: var(--font-size) !important;
+}
+/*forum navi*/
+.group_content_bodytext.forum_breadcrumbs {
+     font-size: var(--font-size) !important;
+}
+.group_content_bodytext.forum_breadcrumbs > a {
+     font-size: calc(var(--font-size) * 0.) !important;
+}
+/*page number, comment numbewr, show comment every page*/
+.ellipsis, .forum_comment_permlink > a, .topic_replies {
+     font-size: var(--font-size) !important;
+}
+/*topic stats*/
+.topicstats {
+     font-size: calc(var(--font-size) * 0.6) !important;
+}
+}
