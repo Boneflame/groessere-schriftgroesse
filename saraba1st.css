@@ -15,9 +15,9 @@
     font-size: var(--main-font-size);
 }
 
-.t_f,           /*post content*/
-.xw1, .pi {     /*ID name*/ 
-    font-size: calc(var(--main-font-size) * 1.1);
+.t_f, font:nth-child(n),   /*post content*/
+.xw1, .pi {                /*ID name*/ 
+    font-size: calc(var(--main-font-size) * 1.1) !important;
 }
 
 
@@ -46,5 +46,39 @@ dd {
 .bm_c, .xst.s, .td:nth-child(n) {
     font-size: var(--main-font-size);
 }
+/*作者/最后回复*/
+td.by {
+     width: 200px !important;
+}
+td.by > cite > a {
+     margin-bottom: 50px !important;
+}
+/*回复/查看*/
+td.num {
+     width: 100px;
+}
+/*作者，回复/查看，最后发表*/
+tr > td:nth-child(n) > em > span, tr > td:nth-child(n) > cite > a, 
+tr > td.num > a, td.num > em,
+tr > td:nth-child(n) > cite > a, tr > td:nth-child(n) > em > a {
+     font-size: calc(var(--main-font-size) * 0.7) !important;
+     line-height: calc(var(--main-font-size) * 0.75) !important;
+}
 
+
+
+.pi {
+     height: calc(var(--main-font-size) * 1.1);
+}
+
+
+/*Ads*/
+/*top*/
+#nv_forum > div.wp.a_h {
+    display:none;
+}
+/*post list*/
+#threadlisttableid > tbody:nth-child(n) > tr > td > ins {
+    display:none !important;
+}
 }
