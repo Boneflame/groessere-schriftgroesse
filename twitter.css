@@ -9,42 +9,16 @@
         position: fixed;
         left: 10px;
     }
-    /*Unterschichte*/
-    .r-1g40b8q.r-16y2uox.r-obd0qt.css-1dbjc4n {
-        max-width: 270px !important;
+    
+    /*background layer of timeline and right column*/
+    #react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div {
+        width: calc(100vw - 350px);
     }
-
-
-    /*right column*/
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-aqfbo4.r-1joea0r.r-zso239.r-1ovo9ad > div > div.css-1dbjc4n.r-gtdqiz.r-1ovo9ad {
-        position: fixed;
-        right: 10px;
-    }
-
-
+    
     /*timeline*/
-    /*titlebar*/
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div > div.css-1dbjc4n.r-aqfbo4.r-kemksi.r-1igl3o0.r-rull8r.r-qklmqi.r-gtdqiz.r-ipm5af.r-1g40b8q,
-    /*typing & posting area*/
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div > a,
-    /*TL in main page*/
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-1ye8kvj.r-13qz1uu.r-184en5c,
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div > div.css-1dbjc4n.r-1jgb5lz.r-1ye8kvj.r-6337vo.r-13qz1uu > div,
-    .r-6337vo.css-1dbjc4n {
-        left: 0px;
-        width: calc(100vw - 650px) !important;
-        max-width: calc(100vw - 650px) !important;
-    }
-    /*Unterschichte*/
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div > div.css-1dbjc4n.r-1jgb5lz.r-1ye8kvj.r-6337vo.r-13qz1uu {
-        margin: 0px;
-    }
-
-    /*timeline in profile page and notification page*/
-    #react-root > div > div > div > main > div > div.css-1dbjc4n.r-aqfbo4.r-1niwhzg.r-16y2uox > div > div.css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div > div.css-1dbjc4n.r-6337vo > div > div {
-        margin: 0px;
-        width: calc(100vw - 650px) !important;
-        max-width: calc(100vw - 650px) !important;
+    .r-1ye8kvj  {
+        width: calc(100vw - 680px) !important;
+        max-width: calc(100vw - 680px) !important;
     }
 }
 
