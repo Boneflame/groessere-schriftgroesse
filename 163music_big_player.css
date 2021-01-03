@@ -119,4 +119,11 @@ col.col-3 {
 .j-flag.f-thide.f-ff0.lytit {
     left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff) + 80px);
 }
+
+/*artist profil photo*/
+div.n-artist.f-cb > img  {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 34px !important;
+}
 }
