@@ -3,6 +3,31 @@
     font-size: 1.35rem;
 }
 
+
+/*large img*/
+/*img position*/
+#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div > div > div:nth-child(n) > div > div > div:nth-child(n) > section > div > div > div:nth-child(n) > div > div > article > div > div > div > div.css-1dbjc4n.r-18u37iz > div.css-1dbjc4n.r-1iusvr4.r-16y2uox.r-1777fci.r-1t982j2 > div:nth-child(n) > div:nth-child(n) > div > div > div > div > a > div > div.r-1adg3ll.r-13qz1uu {
+    padding-bottom: unset;
+}
+.r-vvn4in {
+    background-position: center top;
+}
+    
+/*limit img show size*/
+.r-4gszlv {
+    background-size: contain !important;
+}
+[aria-label="Image"], [aria-label="Bild"]   {
+    margin-bottom: unset !important;
+    margin-top: 0px !important;
+}
+    
+#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div > div > div:nth-child(n) > div > div > div:nth-child(n) > section > div > div > div:nth-child(n) > div > div > article > div > div > div > div.css-1dbjc4n.r-18u37iz > div.css-1dbjc4n.r-1iusvr4.r-16y2uox.r-1777fci.r-1t982j2 > div:nth-child(n) > div:nth-child(n) > div > div > div > div > a > div  {
+    max-height: 90vh !important;
+    /*height: fill-content();*/
+}
+
+
 @media screen and (min-width: 1280px) {
     /*left column*/
     #react-root > div > div > div > header > div > div {
@@ -22,4 +47,20 @@
     }
 }
 
+
+@media screen and (max-width: 1279px) {
+   /*left column*/
+    #react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > header {
+        max-width:70px;
+    }    
+    .r-f9dfq4 {
+        width: 70px;
+    }
+    
+    /*timeline*/
+    .r-1ye8kvj  {
+        width: 89vw !important;
+        max-width: 100vw  !important;
+    }
+}
 }
