@@ -88,6 +88,11 @@ tr > td:nth-child(n) > cite > a, tr > td:nth-child(n) > em > a {
    --custom-font-size: 1.38rem;
 }
 
+.t_f, font:nth-child(n),   /*post content*/
+.xw1, .pi {                /*ID name*/ 
+    font-size: calc(var(--custom-font-size) * 1.1) !important;
+}
+
 /*帖子列表*/
 .bm_c, .xst.s, .td:nth-child(n) {
     font-size: var(--custom-font-size);
