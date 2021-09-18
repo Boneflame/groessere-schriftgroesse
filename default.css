@@ -2,12 +2,19 @@
     --main-font-size: 20px;
 }
 
+@-moz-document domain("zh.moegirls.org.cn") {
 p, p > span:nth-child(n),
-.comment-html, .quote-comments-con,      /*cnbeta comment*/
-.article-content,                        /*cnbeta text*/
 .comment-text {                          /*moegirl comment*/
-    font-size: var(--main-font-size) !important;
+    font-size: var(--main-font-size);
     line-height: 1.5 !important;
+}
+}
+
+@-moz-document regexp("https://.*\\.cnbeta\\.com.*") {
+.comment-html, .quote-comments-con,      /*cnbeta comment*/
+p {                                      /*cnbeta text*/
+     font-size: var(--main-font-size) !important;
+}
 }
 
 @-moz-document regexp("https://www\\.amazon\\.de/(d|g)p/video.+") {
@@ -121,6 +128,11 @@ ul > li:nth-child(n) > div.col.col-6 {
 .m-layer.z-show.m-layer-w2 > div.zcnt > div {
     height: 75vh;
 }
+
+/*评论*/
+div.cntwrap > div:nth-child(n) > div {
+     line-height: 130% !important;
+}
 }
 
 @-moz-document domain("cuckoo.social") {
@@ -138,12 +150,6 @@ p, .main-status-content.status-content.mu-card-text, .secondary-read-text-color,
 @-moz-document regexp("https://devtalk.nvidia.com.*") {
 .forumText {
     font-size: 1.1rem !important;
-}
-}
-
-@-moz-document regexp("https://www\\.google\\..*") {
-.B6fmyf {
-    width: 700px;
 }
 }
 
@@ -212,16 +218,15 @@ span.comment-floor, a.name, span.post-time, span.from-phone {
      font-size: calc(var(--main-font-size) * 0.9);
 }
 
-/*简介*/
-.related-info, h2 > i {
+
+.related-info, h2 > i,                            /*简介*/
+#celebrities > ul > li:nth-child(n) > div,        /*演职员*/
+.short-content {                                  /*评论*/
      font-size: var(--main-font-size);
 }
+
 
 /*演职员*/
-#celebrities > ul > li:nth-child(n) > div {
-     font-size: var(--main-font-size);
-}
-
 #celebrities > ul > li:nth-child(n),
 div > span.role, .name,
 #celebrities > ul > li:nth-child(n) > div > span.name > a {
@@ -230,8 +235,71 @@ div > span.role, .name,
 }
 
 
+/*影评*/
+#link-report > div {
+     font-size: var(--main-font-size) !important;
+}
 }
 
 @-moz-document regexp("https://ttrss\\.vavhc\\.top.*") {
+/*content font size*/
+div.postContent, .content, p, p > span:nth-child(n) {
+    font-size: calc(var(--main-font-size) * 1.1) !important;
+    line-height: 1.5em !important;
+}
+}
 
+@-moz-document regexp("http(s|)://.+\\-plus.net.*") {
+a,
+tbody:nth-child(n) > tr:nth-child(n) > td:nth-child(n) > div,    /* 发帖时间*/
+tbody:nth-child(n) > tr:nth-child(n) > td,                                   /*帖子数*/
+tbody:nth-child(n) > tr:nth-child(n) > td:nth-child(n) > a {     /*最后回复时间*/
+     font-size: calc( 0.9 * var(--main-font-size));
+     line-height: 110%;
+}
+
+/*帖子正文*/
+.f14 {
+     font-size: var(--main-font-size);
+}
+
+/*回复、引用、收藏按钮*/
+li.huifu, li.yinyong, li.shou {
+     width: calc(var(--main-font-size) * 2.2);
+}
+
+/*回复区域*/
+form:nth-child(n) > div > table > tbody > tr:nth-child(n) > td:nth-child(n) {
+     max-width: var(--main-font-size) ;
+}
+
+/*标题输入框*/
+form:nth-child(n) > div > table > tbody > tr:nth-child(n) > td:nth-child(n) > div:nth-child(n) > input {
+     width: 523px;
+}
+
+/*头像*/
+form:nth-child(n) > div:nth-child(n) > table > tbody > tr:nth-child(n) > th.r_two > div.user-pic > table > tbody > tr > td:nth-child(n) > a > img {
+     height: auto;
+}
+}
+
+@-moz-document domain("developer.nvidia.com") {
+#content {
+    max-width: 100vw !important;
+    width: 100vw;
+    padding: 0px !important;
+    margin: 0px !important;
+    left: 0px !important;
+}
+
+#collapseTwo > div {
+    padding: 0px;
+}
+}
+
+@-moz-document domain("www.solidot.org") {
+div, div.p_mainnew {
+    font-size: var(--main-font-size);
+}
 }
