@@ -1,10 +1,13 @@
 :root {
-    --main-font-size: 20px;
+    --main-font-size: 1rem;
+    --left-column-width: 230px;
+    --middle-column-width: 502px;
 }
+
 
 /*setting panel*/
 body {
-    font-size: calc(var(--main-font-size) * 0.9)!important;
+    font-size: calc(var(--main-font-size) * 0.9) !important;
 }
 
 
@@ -13,17 +16,18 @@ body {
      color: #000000 !important;
 }
 
+
 /*custom css dialog*/
 #cssEditDlg {
      width: 70vw !important;
      height: 89vh !important;
 }
-
 body.ttrss_prefs .user-css-editor {
      height: 73vh !important;
      width: 69vw !important;
      font-size: 16px !important;
 }
+
 
 /*log*/
 #dijit_layout_AccordionPane_4 > table > tbody > tr.title > td:nth-child(n),
@@ -34,8 +38,9 @@ td.errstr, td.errno, td.filename, td.login, td.timestamp {
 
 /*limit the height of img*/
 img {
-    max-height: 720px !important;
+    max-height: 75vh !important;
 }
+
 
 /*计数器前的空白区域*/
 div.dijitTreeRow.Unread > span.dijitInline.dijitTreeExpando.dijitTreeExpandoLeaf {
@@ -43,16 +48,19 @@ div.dijitTreeRow.Unread > span.dijitInline.dijitTreeExpando.dijitTreeExpandoLeaf
      margin: 0px !important;
 }
 
+
 /*计数器和右边框的距离*/
 .dijitTreeRow {
      padding: 5px !important;
 }
 
+
 /*content font size*/
-div.postContent, .content {
-    font-size: calc(var(--main-font-size) * 1.1) !important;
+div.postContent, .content, p, p > span:nth-child(n) {
+    font-size: var(--main-font-size) !important;
     line-height: 1.5em !important;
 }
+
 
 /*content margin*/
 p:nth-child(n) {
@@ -60,10 +68,12 @@ p:nth-child(n) {
      max-width: 100% !important;
 }
 
+
 /*title font size*/
 #content-insert > div > div.header > div:nth-child(n) > div.title > a {
-    font-size: calc(var(--main-font-size) * 1.3) !important;
+    font-size: calc(var(--main-font-size) * 1.2) !important;
 }
+
 
 /*author, tag, etc. font size*/
 #content-insert > div > div.header > div:nth-child(n) > a,
@@ -71,23 +81,28 @@ p:nth-child(n) {
      font-size: calc(var(--main-font-size) * 0.9) !important
 }
 
+
 /*article list font size*/
 span > a { /*title*/
-     font-size: calc(var(--main-font-size) * 0.8) !important
+     font-size: calc(var(--main-font-size) * 0.9) !important
 }
-div.title > span > a > span { /*preview*/
+/*preview*/
+div.title > span > a > span {
      font-size: calc(var(--main-font-size) * 0.7) !important
 }
+
 
 /*reduce the padding of article list*/
 #headlines-frame {
      padding: 5px !important
 }
 
+
 /*content area*/
 #content-insert > div > div.content {
-     padding-right: 42px !important;
+     padding-right: 25px !important;
      padding-top: 8px !important;
+     margin-right: 22px !important;
 }
 #content-insert > div > div.content > p:nth-child(n) {
      margin: 0px !important;
@@ -96,10 +111,44 @@ div.title > span > a > span { /*preview*/
      max-width: 1000px;
 }
 
+
 /*iframe*/
-iframe {
+#content-insert > div > div.content > div:nth-child(n), iframe {
      max-width: 100% !important;
      max-height: 60vh !important;
      height: 100%;
      width: 100%;
+}
+
+
+/*left column*/
+#feedTree > div.dijitTreeContainer {
+    padding-top: 15px !important;
+}
+
+
+/*unread number*/
+span.counterNode.unread, span.counterNode.aux {
+    margin: 0px !important;
+}
+
+
+/*column width*/
+#feeds-holder {
+    width: var(--left-column-width) !important;
+}
+#feedTree {
+    width :calc(var(--left-column-width) + 28px) !important;
+}
+/*middle*/
+#headlines-frame {
+    width: var(--middle-column-width)!important;
+}
+#content-insert_splitter {
+    left: calc(var(--middle-column-width) + 3px) !important;
+}
+/*right*/
+#content-insert  {
+    inset: 0px auto auto var(--middle-column-width) !important;
+    width: calc(100vw - var(--middle-column-width) - var(--left-column-width) - 5px) !important;
 }
