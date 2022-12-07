@@ -303,3 +303,37 @@ div, div.p_mainnew {
     font-size: var(--main-font-size);
 }
 }
+
+@-moz-document domain("ttrss.vavhc.top") {
+
+}
+
+@-moz-document regexp("https://www\\.google\\..+") {
+/*AC-重定向*/
+
+/*背景颜色*/
+#rs, #rso .g {
+    background-color: rgba(255,255,255,0);
+}
+
+/*h3字体*/
+#rso .g[tpl='soft'] .op-soft-title a, #rso .g[tpl='soft'] .op-soft-title a em, #rso .g div.r> a, #rso .g a h3, #rso .g div.r> a em, #rcnt #res h3, #rcnt #extrares h3 {
+    color: unset;
+    font-weight: inherit;
+}
+
+/*背景颜色*/
+#rs, #rso .g {
+    background-color: rgba(255,255,255,0);
+}
+
+/*h3字体*/
+#rso .g[tpl='soft'] .op-soft-title a, #rso .g[tpl='soft'] .op-soft-title a em, #rso .g div.r> a, #rso .g a h3, #rso .g div.r> a em, #rcnt #res h3, #rcnt #extrares h3 {
+    color: unset;
+    font-weight: inherit;
+}
+
+#rcnt #res h3, #rcnt #extrares h3 {
+    font-size: larger;
+}
+}
