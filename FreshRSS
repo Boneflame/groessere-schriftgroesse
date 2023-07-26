@@ -1,0 +1,72 @@
+:root {
+    --thumbnail-width: 192px;
+}
+
+/* compact mode :) */
+ .tree-folder-title {
+     font-size: 1rem;
+     line-height: 2rem;
+ }
+/*content font size*/
+.text {
+  font-size: 130%;
+}
+
+/*content area*/
+.item.title.multiline {
+    font-size: 1.2rem !important;
+}
+.summary {
+    font-size: 1.1rem !important;
+}
+.item.website, .item.date {
+    font-size: 1rem !important;
+}
+.item.thumbnail {
+    position: static;
+    float: left;
+    width: var(--thumbnail-width) !important;
+    height: calc(var(--thumbnail-width) * 9/16) !important;
+}
+/*content area*/
+.item.title.multiline {
+    position: absolute;
+    float: left;
+    left: calc(var(--thumbnail-width) + 24px);
+    max-width: calc(100vw - 370px - var(--thumbnail-width));
+}
+/*toggle unread, favourite*/
+.item.manage {
+    position: relative;
+    float: right;
+}
+/*toggle unread*/
+.item-element.read {
+    position: absolute;
+}
+/*toggle favourite*/
+.item-element.bookmark {
+    position: absolute;
+    top: 2.5rem;
+}
+.item.website {
+    position: absolute;
+    /*left: calc(var(--thumbnail-width) + 15rem);*/
+    left: calc(var(--thumbnail-width) + 12px);
+    top: calc(var(--thumbnail-width) * 9/16 - 1.2rem);
+    width: fit-content !important;
+    
+}
+.item.date {
+    position: absolute;
+    /*left: calc(var(--thumbnail-width) + 24px);*/
+    right: 50px;
+    bottom: 0.2rem;
+    width: fit-content !important;
+}
+/*open the site button*/
+.item.link {
+    position: relative;
+    float: right;
+    top: 5rem;
+}
