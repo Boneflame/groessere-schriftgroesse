@@ -1,6 +1,8 @@
 :root {
     --thumbnail-width: 13vw;
     --thumbnail-width-mobile: 30vw;
+    --margin-mobile: 1rem;
+    --font-size-mobile: 0.8rem;
 }
 
 /* compact mode :) */
@@ -8,19 +10,27 @@
     font-size: 1rem;
     line-height: 2rem;
 }
-/*content font size*/
-.text {
-    font-size: 130%;
-}
-/*新闻*/
-.item.title.multiline {
+
+/*条目标题*/
+a.item-element.title.multiline {
     font-size: 1.2rem !important;
 }
-/*摘要*/
-.summary {
-    font-size: 1.1rem !important;
+/*条目*/
+li.item.titleAuthorSummaryDate {
+    overflow: visible !important;
+    float: left;
+    width: calc(100vw - var(--thumbnail-width) - 400px);
 }
-.item.website, .item.date {
+.flux .flux_header .item .summary:has(~ .date) {
+    padding-right: 0px;
+    max-width: 100%;
+}
+span.item-element.date {
+    margin-top: calc(var(--thumbnail-width) * 9/16 - 1.5rem);
+    margin-right: -3.5vw;
+    width: 100% !important;
+}
+time {
     font-size: 1rem !important;
 }
 .item.thumbnail {
@@ -29,11 +39,22 @@
     width: var(--thumbnail-width) !important;
     height: calc(var(--thumbnail-width) * 9/16) !important;
 }
+/*摘要*/
+.summary {
+    font-size: 1.1rem !important;
+    height: calc(var(--thumbnail-width) *9/16 - 3rem) !important;
+}
+.item.website, .item.date {
+    font-size: 1rem !important;
+}
 /*正文*/
 .item.title.multiline {
     position: absolute;
     float: left;
     left: calc(var(--thumbnail-width) + 24px);
+}
+div.text {
+    font-size: 1.2rem;
 }
 /*已读、加星按钮*/
 .item.manage {
@@ -71,48 +92,37 @@
     top: 5rem;
 }
 
-
-@media screen and (min-width: 841px) {
-    /*新闻*/
-    .item.title.multiline {
-        font-size: 1.2rem !important;
-    }
-    /*摘要*/
-    .summary {
-        font-size: 1.1rem !important;
-        height: calc(var(--thumbnail-width) *9/16 - 3rem) !important;
-    }
-    .item.website, .item.date {
-        font-size: 1rem !important;
-    }
-    /*正文*/
-    .item.title.multiline {
-        max-width: calc(100vw - 370px - var(--thumbnail-width));
-    }
-    /*网站名*/
-    .item.website {
-        width: fit-content !important;
-        max-width: calc(100vw - 600px - var(--thumbnail-width)) !important;
-    }
+iframe {
+    width: 540px !important;
+    height: 304px !important;
 }
 
 
 @media screen and (max-width: 840px) {
-    /*新闻*/
-    .item.title.multiline {
+    /*条目*/
+    li.item.titleAuthorSummaryDate {
+        overflow: visible !important;
+        float: left;
+        width: calc(100vw - var(--thumbnail-width-mobile) - 55px);;
+    }
+    /*条目标题*/
+    a.item-element.title.multiline {
+        margin-left: calc(var(--thumbnail-width-mobile) * -1.04);
         font-size: 1rem !important;
+        max-width: 150vw !important;
     }
     /*摘要*/
     .summary {
-        font-size: 0.9rem !important;
-        height: calc(var(--thumbnail-width-mobile) *9/16 - 3rem) !important;
+        font-size: var(--font-size-mobile) !important;
+        height: calc(var(--thumbnail-width-mobile) *9/16 - 1rem) !important;
     }
     .item.website, .item.date {
-        font-size: 0.8rem !important;
+        font-size: var(--font-size-mobile) !important;
     }
     .item.thumbnail {
+        margin-top: calc(var(--margin-mobile) * 2);
         width: var(--thumbnail-width-mobile) !important;
-        height: 6.5rem !important;
+        height: calc(var(--thumbnail-width-mobile) *9/16) !important;
     }
     /*正文*/
     .item.title.multiline {
@@ -127,13 +137,30 @@
     .item.website {
         width: calc(88vw - var(--thumbnail-width-mobile)) !important;
         left: calc(var(--thumbnail-width-mobile) + 0.5rem);
-        top: 5.5rem;
+        top: calc(var(--thumbnail-width-mobile) *9/16 + 1rem);
+    }
+    /*pubdate*/
+    span.item-element.date {
+        display: block;
+        margin-top: calc(var(--thumbnail-width-mobile) *9/16 + var(--font-size-mobile));
+        margin-right: 0px;
+    }
+    time {
+        font-size: var(--font-size-mobile) !important;
     }
 }
 
 
 @media screen and (max-width: 540px) {
+    /*条目标题*/
+    a.item-element.title.multiline {
+        max-width: 90vw !important;
+    }
     .summary {
-        height: calc(var(--thumbnail-width-mobile) *9/16) !important;
+        height: calc(var(--thumbnail-width-mobile) *9/16 - 1rem) !important;
+    }
+     /*pubdate*/
+    span.item-element.date {
+        display: none;
     }
 }
