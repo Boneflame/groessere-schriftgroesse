@@ -241,49 +241,6 @@ div > span.role, .name,
 }
 }
 
-@-moz-document regexp("https://ttrss\\.vavhc\\.top.*") {
-/*content font size*/
-div.postContent, .content, p, p > span:nth-child(n) {
-    font-size: calc(var(--main-font-size) * 1.1) !important;
-    line-height: 1.5em !important;
-}
-}
-
-@-moz-document regexp("http(s|)://.+\\-plus.net.*") {
-a,
-tbody:nth-child(n) > tr:nth-child(n) > td:nth-child(n) > div,    /* 发帖时间*/
-tbody:nth-child(n) > tr:nth-child(n) > td,                                   /*帖子数*/
-tbody:nth-child(n) > tr:nth-child(n) > td:nth-child(n) > a {     /*最后回复时间*/
-     font-size: calc( 0.9 * var(--main-font-size));
-     line-height: 110%;
-}
-
-/*帖子正文*/
-.f14 {
-     font-size: var(--main-font-size);
-}
-
-/*回复、引用、收藏按钮*/
-li.huifu, li.yinyong, li.shou {
-     width: calc(var(--main-font-size) * 2.2);
-}
-
-/*回复区域*/
-form:nth-child(n) > div > table > tbody > tr:nth-child(n) > td:nth-child(n) {
-     max-width: var(--main-font-size) ;
-}
-
-/*标题输入框*/
-form:nth-child(n) > div > table > tbody > tr:nth-child(n) > td:nth-child(n) > div:nth-child(n) > input {
-     width: 523px;
-}
-
-/*头像*/
-form:nth-child(n) > div:nth-child(n) > table > tbody > tr:nth-child(n) > th.r_two > div.user-pic > table > tbody > tr > td:nth-child(n) > a > img {
-     height: auto;
-}
-}
-
 @-moz-document domain("developer.nvidia.com") {
 #content {
     max-width: 100vw !important;
