@@ -1,129 +1,185 @@
-@-moz-document domain("music.163.com") {
-/*Based on https://userstyles.org/styles/140079/theme*/
-
-.m-playbar .list {
-    position: absolute;
-    /*left: 50%;*/
-    bottom: 47px;
-    _bottom: 46px;
-    width: 986px;
-    _width: 982px;
-    margin-left: -493px;
-    _marign-left: -491px;
-    height: 80vh;
-}
-
-/* mp3 list title*/
-.m-playbar .listhd {
-    background-position: 0 0;
-    height: 41px;
-    margin-top: -41px;
-}
-
-
-/*mp3 list cont*/
-.m-playbar .listbd {
-    position: absolute;
-    left: 0;
-    top: 41px;
-    width: 976px;
-    _width: 972px;
-    overflow: hidden;
-    background-position: -1014px 0;
-    _background-position: -1018px 0;
-    background-repeat: repeat-y;
-    height: 100%;
-    margin-top: -41px;
-}
-.m-playbar .listbdc {
-    position: absolute;
-    left: 2px;
-    _left: 0;
-    top: 0;
-    z-index: 4;
-    height: 260px;
-    width: 553px;
-    overflow: hidden;
-    height: 100%;
-}
-
-
-/*select bar */
-.m-playbar .listbd .bline {
-    position: absolute;
-    left: 555px;
-    _left: 553px;
-    top: -1px;
-    z-index: 2;
-    width: 6px;
-    height: 260px;
-    background: #000;
-    opacity: .5;
-    filter: Alpha(opacity=50);
-    height: 100%;
-}
-
-
-/*lrc*/
-.m-playbar .listlyric {
-    position: absolute;
-    right: 40px;
-    top: 0;
-    z-index: 4;
-    margin: 21px 0 20px 0;
-    height: 219px;
-    width: 354px;
-    overflow: hidden;
-    height: 100%;
-}
-
-
-/*wider playlist*/
-.list {
-    left: 600px !important;
-    background-color: #333 !important;
-}
-.list, .listhd, .listhdc, .listbd, .listbdc, .j-flag.imgbg {
-    width: calc(85vw) !important;
-}
+/*此样式可配合网易云音乐扁平风格和网易云音乐脚本*/
+/*https://github.com/wTonyChen/flatnmusic*/
+/*https://github.com/Cinvin/myuserscripts*/
 
 :root {
+    --playlist-width: 75vw;
+    --song-list-width: 80vw;
+    --list-album-img-ratio: 0.5;
+    --song-name-ratio: 0.5;
     --song_name_width: 30vw;
-    --artist_name_width: 250px;
+    --lyric-area-ratio: 0.8;
     --diff: 230px;
+}
+
+
+p,
+div.cntwrap > div:nth-child(n) > div, div.cntwrap > div.que.f-brk.f-pr.s-fc3,   /*评论和引用*/
+div > ul > li:nth-child(n) > p.dec > a,                                                                     /*专辑名*/
+div > ul > li:nth-child(n) > p:nth-child(n) > span > a:nth-child(n),                    /*专辑作曲家*/
+li:nth-child(n) > p:nth-child(n) > span {                                                               /*专辑发行时间*/
+    font-size: 1rem !important;
+}
+/*“我的”页面*/
+#g_mymusic > div {
+    min-width: 85vw;
+}
+/*歌曲列表*/
+#g_mymusic > div > div.g-mn3.f-pr.j-flag {
+    width: calc(85vw - 450px)
+}
+/*左边栏*/
+#g_mymusic > div > div.g-sd3.u-scroll.n-musicsd.f-pr.j-flag,
+div > p.name.f-thide {
+    width: 450px;
+}
+div > p.s-fc4.f-thide.num {
+    line-height: 1rem;
+}
+.f-cb.item {
+    height: 60px;
+}
+/*右侧栏*/
+.g-sd4 {
+    position: absolute !important;
+    right: 10px;
+    float: right !important;
+    width: calc(100vw - var(--song-list-width));
+}
+.f-thide {
+    overflow: visible !important;
+    min-width: calc(100vw - var(--song-list-width) - 7vw) !important;
+}
+/*多音乐端下载按钮*/
+.f-cb.bg {
+    width: 200px;
+    margin-left: calc(50vw - var(--song-list-width) * 0.5 - 140px);
+}
+/*搜索框及其popup*/
+ #g_search > div.srchbg, .j-flag.u-lstlay {
+     min-width: 20vw;
+     left: 20vw;
+     position: absolute;
+}
+ #g_search > div.srchbg {
+     top: -1px;
+}
+
+
+/*艺人页面*/
+/*艺人照片*/
+.n-artist img {
+    width: auto !important;
+    margin: 0 auto;
+}
+
+
+/*专辑页面*/
+/*song list*/
+.f-cb.g-bd4 {
+    width: 100vw;
+}
+tr {
+    height: 2.5rem !important;
+    font-size: 1rem;
+}
+.txt {
+    font-size: 1rem;
+    overflow: visible !important;
+}
+/*歌曲列表宽度*/
+.g-mn4c {
+    width: var(--song-list-width);
+}
+/*adjust for katakana terminator*/
+/*rt.katakana-terminator-rt {
+    position: relative;
+    top: -0.6rem;
+}*/
+
+
+/*歌曲页面*/
+/*收藏popup*/
+.m-layer.z-show.m-layer-w2 > div.zcnt > div {
+    height: 75vh;
+}
+/*左侧额外信息*/
+/*配合https://github.com/Cinvin/myuserscripts*/
+table.m-table:nth-child(n) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
+    width: 5.15vw !important;
+}
+/*left column which include album img*/
+.m-lycifo .cvrwrap {
+    width: 22.45vw;
+}
+td {
+    width: 13vw;
+}
+
+
+/*播放器*/
+.m-playbar .list {
+    height: calc(var(--playlist-width) * 0.5);
+}
+/*wider playlist*/
+.list {
+    left: calc(50vw - var(--playlist-width)*0.5 + 26vw) !important;
+    opacity:.98;
+}
+.list, .listbd {
+    width: var(--playlist-width) !important;
+}
+/*播放列表*/
+.listbdc  {
+    width: calc(var(--playlist-width)*0.5) !important;
+}
+/*播放列表滚动条*/
+.j-flag.bline {
+    left: calc(var(--playlist-width) * var(--list-album-img-ratio)) !important
+}
+/*播放列表中的封面*/
+.j-flag.imgbg {
+    width: calc(var(--playlist-width) * (1 - var(--list-album-img-ratio)));
 }
 /*song name in playlist*/
 .col.col-2 {
-    width: var(--song_name_width) !important;
-}
-col.col-3 {
-    width: 10px !important;
+    width: calc(var(--playlist-width) * var(--list-album-img-ratio) * var(--song-name-ratio)) !important;
 }
 /*artist*/
 .col.col-4 {
-    width: var(--artist_name_width) !important;
+    width: calc(var(--playlist-width) * var(--list-album-img-ratio) * calc(1 - var(--song-name-ratio)) * 0.65) !important;
 }
-/*jhplaylist rollbar*/
-.j-flag.bline {
-    left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff)) !important
+/*收藏等按钮*/
+.col.col-3 {
+    position: absolute;
+    left: calc(var(--playlist-width) * var(--list-album-img-ratio) * var(--song-name-ratio) - 50px);
 }
-.msk2 {
-    width: 10px !important;
+/*播放列表中的分享按钮*/
+.col.col-6 {
+    width: auto !important;
 }
 /*lrc display*/
 .j-flag.listlyric {
-    left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff));
-    width: calc(85vw - var(--song_name_width) - var(--artist_name_width) - var(--diff));
+    left: calc(var(--playlist-width) * (1 - var(--list-album-img-ratio)) + var(--playlist-width) * var(--list-album-img-ratio) * (1 - var(--lyric-area-ratio)) * 0.5);
+    width: calc(var(--playlist-width) * (1 - var(--list-album-img-ratio)) * var(--lyric-area-ratio));
 }
-/*song name above lrc*/
-.j-flag.f-thide.f-ff0.lytit {
-    left: calc(var(--song_name_width) + var(--artist_name_width) + var(--diff) + 80px);
+/*播放器控制面板字体*/
+#g_player > div.play > div.j-flag.words {
+    font-size: 1rem;
+}
+#g_player > div.play > div.m-pbar > span {
+    font-size: 1.5rem;
 }
 
-/*artist profil photo*/
-div.n-artist.f-cb > img  {
-    position: absolute;
-    margin-left: 0px;
-    margin-top: 34px !important;
+
+/*歌词*/
+.g-bd4.f-cb > div.g-mn4 > div > div > div.m-lycifo > div.f-cb > div.cnt {
+    position: relative;
+    left: calc(980px * 0.5 - 50vw);
+    /*width: 50vw;*/
 }
+#lyric-content {
+    width: 40vw;
+    font-size: 1.1rem;
+    line-height: 2rem;
 }
