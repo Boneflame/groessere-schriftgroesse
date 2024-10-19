@@ -28,113 +28,6 @@ p > span:nth-child(n),
 }
 }
 
-@-moz-document domain("music.163.com") {
-p,
-div.cntwrap > div:nth-child(n) > div, div.cntwrap > div.que.f-brk.f-pr.s-fc3,   /*评论和引用*/
-div > ul > li:nth-child(n) > p.dec > a,                                         /*专辑名*/
-div > ul > li:nth-child(n) > p:nth-child(n) > span > a:nth-child(n),            /*专辑作曲家*/
-li:nth-child(n) > p:nth-child(n) > span {                                       /*专辑发行时间*/
-    font-size: 1rem !important;
-}
-
-
-/*去掉原list背景的黑块*/
-#g_playlist > div.listbd > div.msk {
-    display: none;
-}
-
-
-/*修复播放列表中时间的显示*/
-ul > li:nth-child(n) > div.col.col-5 {
-    width: 60px;
-}
-ul > li:nth-child(n) > div.col.col-6 {
-    width: 10px;
-}
-
-
-/*加宽*/
-@media screen and (min-width: 1280px) {
-    /*歌曲列表*/
-    #m-playlist {                    
-        position: relative;
-        width: 85vw;
-    }
-    
-    /*“我的音乐”页面*/
-    #g_mymusic > div {
-        min-width: 85vw;
-    }
-    
-    /*左边栏*/
-    #g_mymusic > div > div.g-sd3.u-scroll.n-musicsd.f-pr.j-flag,
-    div > p.name.f-thide {
-        width: 450px;
-    }
-    div > p.s-fc4.f-thide.num {
-        line-height: 1rem;
-    }
-    .f-cb.item {
-        height: 60px;
-    }
-    
-    /*歌曲列表*/
-    #g_mymusic > div > div.g-mn3.f-pr.j-flag {
-        width: calc(85vw - 450px)
-    }
-    
-    /*搜索框、创意者中心按钮*/
-    #g_search > div.srchbg {
-        width: 190px;
-    }
-    #g-topbar > div.m-top > div > a {
-        width: 100px;
-    }
-    
-    /*专辑播放液面*/
-    /*song list*/
-    .f-cb.g-bd4 {
-        position: relative;
-        width: 100vw;
-        /*left: calc(980px * 0.5 - 50vw);*/
-    }
-    /*tight sidebar*/
-    .g-sd4 {
-        position: fixed;
-        right: 10px;
-        float: right !important;
-    }
-    /*歌词*/
-    .g-bd4.f-cb > div.g-mn4 > div > div > div.m-lycifo > div.f-cb > div.cnt {
-        position: relative;
-        left: calc(980px * 0.5 - 50vw);
-    }
-}
-@media screen and (max-width: 1279px) {
-    /*歌曲列表*/
-    #m-playlist {
-        position: relative;
-        width: 100vw;
-    }
-    
-    /*“我的音乐”页面*/
-    #g_mymusic > div {
-        min-width: 100vw;
-    }
-}
-
-
-/*收藏popup*/
-.m-layer.z-show.m-layer-w2 > div.zcnt > div {
-    height: 75vh;
-}
-
-/*评论*/
-div.cntwrap > div:nth-child(n) > div {
-     line-height: 130% !important;
-}
-}
-
 @-moz-document domain("cuckoo.social") {
 p, .main-status-content.status-content.mu-card-text, .secondary-read-text-color, .full-reply-status-content.status-content.mu-card-text, .primary-read-text-color.spoiler-text-area, 
 .reblog-source-link, .reblog-status-content.status-content.mu-card-text {   /*转发来源和原po*/
@@ -241,6 +134,14 @@ div > span.role, .name,
 }
 }
 
+@-moz-document regexp("https://ttrss\\.vavhc\\.top.*") {
+/*content font size*/
+div.postContent, .content, p, p > span:nth-child(n) {
+    font-size: calc(var(--main-font-size) * 1.1) !important;
+    line-height: 1.5em !important;
+}
+}
+
 @-moz-document domain("developer.nvidia.com") {
 #content {
     max-width: 100vw !important;
@@ -258,39 +159,5 @@ div > span.role, .name,
 @-moz-document domain("www.solidot.org") {
 div, div.p_mainnew {
     font-size: var(--main-font-size);
-}
-}
-
-@-moz-document domain("ttrss.vavhc.top") {
-
-}
-
-@-moz-document regexp("https://www\\.google\\..+") {
-/*AC-重定向*/
-
-/*背景颜色*/
-#rs, #rso .g {
-    background-color: rgba(255,255,255,0);
-}
-
-/*h3字体*/
-#rso .g[tpl='soft'] .op-soft-title a, #rso .g[tpl='soft'] .op-soft-title a em, #rso .g div.r> a, #rso .g a h3, #rso .g div.r> a em, #rcnt #res h3, #rcnt #extrares h3 {
-    color: unset;
-    font-weight: inherit;
-}
-
-/*背景颜色*/
-#rs, #rso .g {
-    background-color: rgba(255,255,255,0);
-}
-
-/*h3字体*/
-#rso .g[tpl='soft'] .op-soft-title a, #rso .g[tpl='soft'] .op-soft-title a em, #rso .g div.r> a, #rso .g a h3, #rso .g div.r> a em, #rcnt #res h3, #rcnt #extrares h3 {
-    color: unset;
-    font-weight: inherit;
-}
-
-#rcnt #res h3, #rcnt #extrares h3 {
-    font-size: larger;
 }
 }
