@@ -1,4 +1,4 @@
-/*此样式可配合网易云音乐扁平风格和网易云音乐脚本*/
+/*配合网易云音乐扁平风格和网易云音乐脚本*/
 /*https://github.com/wTonyChen/flatnmusic*/
 /*https://github.com/Cinvin/myuserscripts*/
 
@@ -15,9 +15,9 @@
 
 p,
 div.cntwrap > div:nth-child(n) > div, div.cntwrap > div.que.f-brk.f-pr.s-fc3,   /*评论和引用*/
-div > ul > li:nth-child(n) > p.dec > a,                                                                     /*专辑名*/
-div > ul > li:nth-child(n) > p:nth-child(n) > span > a:nth-child(n),                    /*专辑作曲家*/
-li:nth-child(n) > p:nth-child(n) > span {                                                               /*专辑发行时间*/
+div > ul > li:nth-child(n) > p.dec > a,                                         /*专辑名*/
+div > ul > li:nth-child(n) > p:nth-child(n) > span > a:nth-child(n),            /*专辑作曲家*/
+li:nth-child(n) > p:nth-child(n) > span {                                       /*专辑发行时间*/
     font-size: 1rem !important;
 }
 /*“我的”页面*/
@@ -27,6 +27,10 @@ li:nth-child(n) > p:nth-child(n) > span {                                       
 /*歌曲列表*/
 #g_mymusic > div > div.g-mn3.f-pr.j-flag {
     width: calc(85vw - 450px)
+}
+#m-playlist {
+    margin-left: 0px;
+    width: var(--song-list-width) !important;
 }
 /*左边栏*/
 #g_mymusic > div > div.g-sd3.u-scroll.n-musicsd.f-pr.j-flag,
@@ -43,12 +47,27 @@ div > p.s-fc4.f-thide.num {
 .g-sd4 {
     position: absolute !important;
     right: 10px;
-    float: right !important;
     width: calc(100vw - var(--song-list-width));
 }
-.f-thide {
-    overflow: visible !important;
+/*Ta的其他热门专辑名*/
+div.g-bd4.f-cb.p-share > div.g-sd4 > div > ul.m-rctlist.f-cb > li:nth-child(n) > div.info > p.f-thide {
+    /*overflow: visible !important;*/
     min-width: calc(100vw - var(--song-list-width) - 7vw) !important;
+}
+/*相似歌手*/
+#rec-similar-artists {
+    position: relative;
+    left: 0.5vw !important;
+}
+#rec-similar-artists > li {
+    width: 3vw;
+}
+#rec-similar-artists > li:nth-child(n) > p > a {
+    overflow: visible;
+    /*margin-left: -1vw;*/
+}
+.m-rctlist .nm {
+    float: none;
 }
 /*多音乐端下载按钮*/
 .f-cb.bg {
@@ -71,6 +90,27 @@ div > p.s-fc4.f-thide.num {
 .n-artist img {
     width: auto !important;
     margin: 0 auto;
+}
+/*所有专辑*/
+.m-cvrlst-alb4 {
+    min-height: 60vh;
+}
+.m-cvrlst-alb4 li {
+    height: 15rem;
+}
+/*专辑名*/
+.f-thide2 {
+    overflow: visible;
+    min-height: 5rem;
+}
+
+/*歌单*/
+td.s-fc3 {
+    max-width: 1vw !important;
+    width: 1vw !important;
+}
+.af1.wp {
+    width: 5rem !important;
 }
 
 
@@ -169,6 +209,29 @@ td {
 }
 #g_player > div.play > div.m-pbar > span {
     font-size: 1.5rem;
+}
+/*歌曲名*/
+#g_player > div.play > div.j-flag.words > a.f-thide.name.fc1.f-fl {
+    overflow: visible;
+}
+/*艺术家*/
+#g_player > div.play > div.j-flag.words > span {
+    display: flex;
+    position: relative;
+    right: calc(var(--playlist-width) * 0.0 * -1);
+    max-width: calc(var(--playlist-width) * 0.331) !important;
+}
+/*播放时间*/
+span.j-flag.time {
+    position: absolute;
+    bottom: 500px;
+}
+/*播放器进度条*/
+.m-playbar .play {
+    min-width: calc(var(--playlist-width) - 483px) !important;
+}
+#g_player {
+    margin-left: calc(var(--playlist-width) * 0.5 * -1 + 0.25vw) !important;
 }
 
 
