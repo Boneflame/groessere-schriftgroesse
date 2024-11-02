@@ -1,6 +1,6 @@
 :root {
-    --thumbnail-width: 13vw;
-    --thumbnail-width-mobile: 30vw;
+    --thumbnail-height: 7.5rem;
+    --thumbnail-height-mobile: 5.5rem;
     --margin-mobile: 1rem;
     --font-size-mobile: 0.8rem;
 }
@@ -19,15 +19,15 @@ a.item-element.title.multiline {
 li.item.titleAuthorSummaryDate {
     overflow: visible !important;
     float: left;
-    width: calc(100vw - var(--thumbnail-width) - 400px);
+    width: calc(100vw - var(--thumbnail-height)/9*16 - 400px);
 }
 .flux .flux_header .item .summary:has(~ .date) {
     padding-right: 0px;
     max-width: 100%;
 }
 span.item-element.date {
-    margin-top: calc(var(--thumbnail-width) * 9/16 - 1.5rem);
-    margin-right: -3.5vw;
+    margin-top: calc(var(--thumbnail-height) - 1.5rem);
+    margin-right: -3.75rem;
     width: 100% !important;
 }
 time {
@@ -36,13 +36,13 @@ time {
 .item.thumbnail {
     position: static;
     float: left;
-    width: var(--thumbnail-width) !important;
-    height: calc(var(--thumbnail-width) * 9/16) !important;
+    width: calc(var(--thumbnail-height)/9*16) !important;
+    height: var(--thumbnail-height)  !important;
 }
 /*摘要*/
 .summary {
     font-size: 1.1rem !important;
-    height: calc(var(--thumbnail-width) *9/16 - 3rem) !important;
+    height: calc(var(--thumbnail-height) - 2.5rem) !important;
 }
 .item.website, .item.date {
     font-size: 1rem !important;
@@ -51,7 +51,7 @@ time {
 .item.title.multiline {
     position: absolute;
     float: left;
-    left: calc(var(--thumbnail-width) + 24px);
+    left: calc(var(--thumbnail-height)/9*16 + 24px);
 }
 div.text {
     font-size: 1.2rem;
@@ -74,9 +74,9 @@ div.text {
 .item.website {
     position: absolute;
     /*left: calc(var(--thumbnail-width) + 15rem);*/
-    left: calc(var(--thumbnail-width) + 12px);
-    top: calc(var(--thumbnail-width) * 9/16 - 1.2rem);
-    
+    left: calc(var(--thumbnail-height)/9*16 + 12px);
+    top: calc(var(--thumbnail-height) - 1.2rem);
+    width: calc(100vw - var(--thumbnail-height)/9*16 - 350px) !important;
 }
 .item.date {
     position: absolute;
@@ -103,47 +103,47 @@ iframe {
     li.item.titleAuthorSummaryDate {
         overflow: visible !important;
         float: left;
-        width: calc(100vw - var(--thumbnail-width-mobile) - 55px);;
+        width: calc(100vw - var(--thumbnail-height-mobile)/9*16 - 55px);;
     }
     /*条目标题*/
     a.item-element.title.multiline {
-        margin-left: calc(var(--thumbnail-width-mobile) * -1.04);
+        margin-left: calc(var(--thumbnail-height-mobile)/9*16 * -1.04);
         font-size: 1rem !important;
-        max-width: 150vw !important;
+        max-width: 95vw !important;
     }
     /*摘要*/
     .summary {
         font-size: var(--font-size-mobile) !important;
-        height: calc(var(--thumbnail-width-mobile) *9/16 - 1rem) !important;
+        height: calc(var(--thumbnail-height-mobile) - 0.8rem) !important;
     }
     .item.website, .item.date {
         font-size: var(--font-size-mobile) !important;
     }
     .item.thumbnail {
         margin-top: calc(var(--margin-mobile) * 2);
-        width: var(--thumbnail-width-mobile) !important;
-        height: calc(var(--thumbnail-width-mobile) *9/16) !important;
+        width: calc(var(--thumbnail-height-mobile)/9*16) !important;
+        height: var(--thumbnail-height-mobile) !important;
     }
     /*正文*/
     .item.title.multiline {
-        max-width: calc(100vw - 4rem - var(--thumbnail-width-mobile)) !important;
-        left: calc(var(--thumbnail-width-mobile) + 1rem);
+        max-width: calc(100vw - 4rem - var(--thumbnail-height-mobile)/9*16) !important;
+        left: calc(var(--thumbnail-height-mobile)/9*16 + 1rem);
     }
     /*网站名*/
     .item.website span {
         display: inline !important;
-        left: calc(var(--thumbnail-width-mobile) + 0.5rem);
+        left: calc(var(--thumbnail-height-mobile)/9*16 + 0.5rem);
     }
     .item.website {
-        width: calc(88vw - var(--thumbnail-width-mobile)) !important;
-        left: calc(var(--thumbnail-width-mobile) + 0.5rem);
-        top: calc(var(--thumbnail-width-mobile) *9/16 + 1rem);
+        width: calc(88vw - var(--thumbnail-height-mobile)/9*16) !important;
+        left: calc(var(--thumbnail-height-mobile)/9*16 + 0.5rem);
+        top: calc(var(--thumbnail-height-mobile) + 1rem);
     }
     /*pubdate*/
     span.item-element.date {
         display: block;
-        margin-top: calc(var(--thumbnail-width-mobile) *9/16 + var(--font-size-mobile));
-        margin-right: 0px;
+        margin-top: calc(var(--thumbnail-height-mobile) + var(--font-size-mobile));
+        margin-right: -1.8rem;
     }
     time {
         font-size: var(--font-size-mobile) !important;
@@ -157,7 +157,7 @@ iframe {
         max-width: 90vw !important;
     }
     .summary {
-        height: calc(var(--thumbnail-width-mobile) *9/16 - 1rem) !important;
+        height: calc(var(--thumbnail-height-mobile) - 0.8rem) !important;
     }
      /*pubdate*/
     span.item-element.date {
