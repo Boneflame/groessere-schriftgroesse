@@ -10,6 +10,7 @@
     --song_name_width: 30vw;
     --lyric-area-ratio: 0.8;
     --diff: 230px;
+    --album-pic-size: 11.5vw;
 }
 
 
@@ -40,18 +41,23 @@ div > p.name.f-thide {
 div > p.s-fc4.f-thide.num {
     line-height: 1rem;
 }
-.f-cb.item {
+/*.f-cb.item {
     height: 60px;
-}
+}*/
 /*右侧栏*/
 .g-sd4 {
     position: absolute !important;
     right: 10px;
     width: calc(100vw - var(--song-list-width));
 }
-/*Ta的其他热门专辑名*/
-div.g-bd4.f-cb.p-share > div.g-sd4 > div > ul.m-rctlist.f-cb > li:nth-child(n) > div.info > p.f-thide {
-    /*overflow: visible !important;*/
+#m-playlist > div.g-sd4 {
+    right: calc(var(--song-list-width) - 100vw);
+}
+
+/*Ta的其他热门专辑名，包含这首歌的歌单*/
+/*div.g-bd4.f-cb.p-share > div.g-sd4 > div > ul.m-rctlist.f-cb > li:nth-child(n) > div.info > p.f-thide {*/
+div.info > p.f-thide {
+    overflow: visible;
     min-width: calc(100vw - var(--song-list-width) - 7vw) !important;
 }
 /*相似歌手*/
@@ -59,15 +65,26 @@ div.g-bd4.f-cb.p-share > div.g-sd4 > div > ul.m-rctlist.f-cb > li:nth-child(n) >
     position: relative;
     left: 0.5vw !important;
 }
-#rec-similar-artists > li {
-    width: 3vw;
-}
 #rec-similar-artists > li:nth-child(n) > p > a {
     overflow: visible;
-    /*margin-left: -1vw;*/
+    margin-left: -5rem;
 }
 .m-rctlist .nm {
     float: none;
+}
+.hd {
+    display: flex !important;
+    align-items: center;
+}
+/*歌手名显示在图片右侧*/
+#rec-similar-artists > li {
+    width: 10vw;
+    height: 3.5rem;
+}
+.m-hdlist p {
+    position: relative;
+    left: 30px;
+    top: -42px;
 }
 /*多音乐端下载按钮*/
 .f-cb.bg {
@@ -76,8 +93,8 @@ div.g-bd4.f-cb.p-share > div.g-sd4 > div > ul.m-rctlist.f-cb > li:nth-child(n) >
 }
 /*搜索框及其popup*/
  #g_search > div.srchbg, .j-flag.u-lstlay {
-     min-width: 20vw;
-     left: 20vw;
+     width: calc(50vw - 540px);
+     left: 375px;
      position: absolute;
 }
  #g_search > div.srchbg {
@@ -96,12 +113,19 @@ div.g-bd4.f-cb.p-share > div.g-sd4 > div > ul.m-rctlist.f-cb > li:nth-child(n) >
     min-height: 60vh;
 }
 .m-cvrlst-alb4 li {
-    height: 15rem;
+    height: calc(var(--album-pic-size) + 7rem);
 }
 /*专辑名*/
 .f-thide2 {
     overflow: visible;
-    min-height: 5rem;
+    min-height: 3rem;
+}
+/*专辑封面*/
+#m-song-module > li:nth-child(n), #m-song-module > li:nth-child(n) > div {
+    width: var(--album-pic-size);
+}
+#m-song-module > li:nth-child(n) > div {
+    height: var(--album-pic-size);
 }
 
 /*歌单*/
@@ -157,14 +181,21 @@ td {
 }
 
 
+/*歌单页面*/
+/*歌曲编号*/
+.m-table .ncmextend-playlist-songindex {
+    width: 50px;
+}
+
+
 /*播放器*/
 .m-playbar .list {
-    height: calc(var(--playlist-width) * 0.5);
+    height: calc(var(--playlist-width) * 0.5) !important;
 }
 /*wider playlist*/
 .list {
-    left: calc(50vw - var(--playlist-width)*0.5 + 26vw) !important;
-    opacity:.98;
+    left: calc(50vw - var(--playlist-width) * 0.5 + 500px) !important;
+    opacity:.98 !important;
 }
 .list, .listbd {
     width: var(--playlist-width) !important;
@@ -179,11 +210,11 @@ td {
 }
 /*播放列表中的封面*/
 .j-flag.imgbg {
-    width: calc(var(--playlist-width) * (1 - var(--list-album-img-ratio)));
+    width: calc(var(--playlist-width) * (1 - var(--list-album-img-ratio))) !important;
 }
 /*song name in playlist*/
 .col.col-2 {
-    width: calc(var(--playlist-width) * var(--list-album-img-ratio) * var(--song-name-ratio)) !important;
+    width: calc(var(--playlist-width) * var(--list-album-img-ratio) * var(--song-name-ratio) - 13px) !important;
 }
 /*artist*/
 .col.col-4 {
@@ -192,7 +223,7 @@ td {
 /*收藏等按钮*/
 .col.col-3 {
     position: absolute;
-    left: calc(var(--playlist-width) * var(--list-album-img-ratio) * var(--song-name-ratio) - 50px);
+    left: calc(var(--playlist-width) * var(--list-album-img-ratio) * var(--song-name-ratio) - 4rem);
 }
 /*播放列表中的分享按钮*/
 .col.col-6 {
@@ -206,6 +237,7 @@ td {
 /*播放器控制面板字体*/
 #g_player > div.play > div.j-flag.words {
     font-size: 1rem;
+    max-width: 39vw;
 }
 #g_player > div.play > div.m-pbar > span {
     font-size: 1.5rem;
@@ -245,4 +277,10 @@ span.j-flag.time {
     width: 40vw;
     font-size: 1.1rem;
     line-height: 2rem;
+}
+
+
+/*search result*/
+.g-bd {
+    width: 60vw;
 }
